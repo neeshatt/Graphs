@@ -4,9 +4,19 @@
     color: white;
 }
 
-#h{
-    color: blue;
+#h {
+  color: white;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  padding-left: 12px;
+  font-weight: 200;
+  font-size: 50px;
+  display: inline-block;
 }
+
+#logo {
+  height: 100px;
+}
+
 
 li, a{
     color: white;
@@ -62,6 +72,7 @@ header{
   width: 30px;
   margin-top: 35px;
 }
+
 #bulb:hover{
   transform: scale(2);
 }
