@@ -28,14 +28,16 @@
     padding-top: 100px;
 }
 
-#rubaidimg, #nishatimg {
+#rubaidimg,
+#nishatimg {
     margin: 20px;
     height: 120px;
     border-radius: 50px;
     vertical-align: middle;
 }
 
-.rubaidname, .nishatname {
+.rubaidname,
+.nishatname {
     font-family: 'Roboto Mono', monospace;
     color: white;
     font-size: 35px;
@@ -48,6 +50,7 @@
 .gmail:hover {
     height: 50px;
 }
+
 .github {
     height: 70px;
     padding-left: 25px;
@@ -60,9 +63,70 @@
     padding-left: 10px;
     padding-bottom: 10px;
 }
+
 .text {
     padding-left: 40px;
     font-family: Roboto Mono;
     color: white;
     width: 400px;
+}
+
+#h {
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding-left: 12px;
+    font-weight: 200;
+    font-size: 50px;
+    display: inline-block;
+}
+
+#logo {
+    height: 100px;
+}
+
+li,
+a {
+    font-family: Roboto Mono;
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 30px;
+}
+
+.nav_links {
+    list-style: none;
+}
+
+.nav_links li {
+    float: left;
+    display: inline;
+    padding: 20px;
+}
+
+.nav_links li a {
+    display: inline-block;
+    padding: 10px;
+    transition: all 0.3s ease 0s;
+}
+
+.nav_links li a:hover:not(.active) {
+    background-color: black;
+    color: white;
+    border: 5px, solid yellow;
+    font-size: 20px;
+    border-radius: 25px;
+}
+
+.nav_links li a.active {
+    background-color: black;
+    color: white;
+    border: 5px, solid cyan;
+    border-radius: 25px;
 }
