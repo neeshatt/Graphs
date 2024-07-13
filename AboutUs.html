@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="AboutUs.css">
+    <title>About Us</title>
+</head>
+
+<body bgcolor="#012169">
+    <div class="header-container">
+        <span id="header"></span>
+        <script>
+            var i = 0;
+            var txt = "About Us ...";
+            var speed = 400; // Adjust this value to change the typing speed
+            var headerElement = document.getElementById("header");
+            var cyclesCompleted = 0;
+            var totalCycles = 4; // Set this to the number of times you want the text to be typed
+    
+            function typeWriter() {
+                if (i < txt.length) {
+                    headerElement.innerHTML += txt.charAt(i);
+                    i++;
+                    setTimeout(typeWriter, speed);
+                } else {
+                    cyclesCompleted++;
+                    if (cyclesCompleted < totalCycles) {
+                        // If we haven't completed all cycles, reset and start again
+                        setTimeout(resetTypewriter, 1000); // Wait for 1 second before restarting
+                    }
+                }
+            }
+    
+            function resetTypewriter() {
+                headerElement.innerHTML = ''; // Clear the text
+                i = 0; // Reset the counter
+                typeWriter(); // Start typing again
+            }
+    
+            window.onload = typeWriter;
+        </script>
+    </div>
+
+    <div class="US">
+        <div class="child">
+            <img id="rubaidimg" src="rubaidcat.jpg">
+            <span class="rubaidname">
+                Rubaid Ahmed
+            </span>
+            <br>
+            <a href="https://github.com/Rubaid-Ahmed" target="_blank"><img class="github" src="social.png"></a>
+            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank"><img class="gmail"
+                    src="gmail.png"></a>
+            <br><br>
+            <p class="text">
+                I was once a Nana Komatsu fan, she never forgave me for that.
+            </p>
+        </div>
+
+        <div class="child">
+            <img id="nishatimg" src="nishatcat.jpg">
+            <span class="nishatname">
+                Nishat Shawrin
+            </span>
+            <br>
+            <a href="https://github.com/neeshatt" target="_blank"> <img class="github" src="social.png"> </a>
+            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank"><img class="gmail"
+                    src="gmail.png"></a>
+            <br><br>
+            <p class="text">
+                He was a Nana Komatsu fan, he's right, I'll never forgive him.
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>

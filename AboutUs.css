@@ -1,0 +1,68 @@
+.header-container {
+    margin-left: 100px;
+    margin-top: 94px;
+}
+
+#header {
+    display: inline-block;
+    color: #00BFFF;
+    letter-spacing: 5px;
+    font-family: Roboto Mono;
+    font-size: 40px;
+    position: relative;
+    width: max-content;
+}
+
+.parent {
+    border: 1px solid black;
+    margin: 20rem;
+    padding: 2rem 2rem;
+    text-align: center;
+}
+
+.child {
+    display: inline-block;
+    padding: 1rem 1rem;
+    vertical-align: middle;
+    padding-left: 170px;
+    padding-top: 100px;
+}
+
+#rubaidimg, #nishatimg {
+    margin: 20px;
+    height: 120px;
+    border-radius: 50px;
+    vertical-align: middle;
+}
+
+.rubaidname, .nishatname {
+    font-family: 'Roboto Mono', monospace;
+    color: white;
+    font-size: 35px;
+}
+
+.github:hover {
+    width: 80px;
+}
+
+.gmail:hover {
+    height: 50px;
+}
+.github {
+    height: 70px;
+    padding-left: 25px;
+    padding-top: 40px;
+    padding-bottom: 10px;
+}
+
+.gmail {
+    height: 40px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+}
+.text {
+    padding-left: 40px;
+    font-family: Roboto Mono;
+    color: white;
+    width: 400px;
+}
