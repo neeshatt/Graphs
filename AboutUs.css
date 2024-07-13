@@ -11,6 +11,7 @@
     font-size: 40px;
     position: relative;
     width: max-content;
+    font-weight: bolder;
 }
 
 .parent {
@@ -72,7 +73,7 @@
 }
 
 #h {
-    color: white;
+    color: #0BDA51;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     padding-left: 12px;
     font-weight: 200;
@@ -119,7 +120,7 @@ header {
 .nav_links li a:hover:not(.active) {
     background-color: black;
     color: white;
-    border: 5px, solid yellow;
+    border: 5px, solid #0BDA51;
     font-size: 20px;
     border-radius: 25px;
 }
