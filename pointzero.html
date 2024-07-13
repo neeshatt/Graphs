@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="pointzero.css">
+    <title>Point Zero</title>
+</head>
+
+<body bgcolor="#012169">
+    <header>
+        <!--Image-->
+        <div>
+            <h2 id="h" align="left">DotConnect</h2>
+            <img id="logo" src="line-chart.png">
+        </div>
+        <nav>
+            <ul class="nav_links">
+                <li><a href="homepage.html"> Home </a></li>
+                <li><a href="problemset.html"> Problemset </a></li>
+                <li><a href="IDE.html"> IDE </a></li>
+                <li><a href="AboutUs.html"> About us </a></li>
+            </ul>
+        </nav>
+    </header>
+    <div>
+        <h class="define">Definition of Graph</h>
+        <br>
+        <p class="text">
+            A graph G = (V,E) consists of V, a non empty set of vertices (also known as nodes) and E, a set of edges.
+            Each edge has either one
+            or two vertices associated with it, called its endpoints. An edge is said to <i><span
+                    style="color: skyblue;">connect</i></span> its endpoints. Graphs are structures amounting to a set
+            of objects in which some pairs of the objects are in some sense "related". Typically, a graph is depicted in
+            diagrammatic form as a set of dots or circles for the vertices, joined by lines or curves for the edges.
+        </p>
+        <div class="parent">
+            <img class="child" src="graph.png">
+            <p class="child" id="fig">Fig 01: a graph with six vertices and seven edges:
+                <br> V = {1, 2, 3, 4, 5, 6}
+                <br> E = {{1,2}, {2,3}, {3,4}, {4,5}, {4,6}, {1,5}, {2,5}}
+            </p>
+        </div>
+        <div>
+            <p class="def">
+                <br />
+                <b><span style="color: #E89611; font-size: 25px;">Empty Graph:</span></b> An empty graph is a graph that
+                has an empty set
+                of vertices
+                (and thus an empty set of
+                edges).
+                <br />
+                <br />
+                <b><span style="color: #E89611; font-size: 25px;">Simple Graph:</span></b> A graph in which each edge
+                connects two different vertices and where
+                no two edges connect the same pair of vertices is called a simple graph.
+                <br /> <br />
+                <b><span style="color: #E89611; font-size: 25px;">Multigraph:</span></b> Graphs that may have multiple
+                edges connecting the same vertices are called multigraphs.
+                When there are m different edges associated to the same unordered pair of vertices
+                {u, v}, we also say that {u, v} is an edge of multiplicity m. That is, we can think of this set of
+                edges as m different copies of an edge {u, v}.
+            </p>
+            <br /><br />
+            <img id="simple" src="simplegraph.png">
+            <img id="multi" src="multigraph.png">
+            <img id="multi" src="loop.png">
+            <br /><br /> <br />
+            <p class="def">
+                <b><span style="color: #E89611; font-size: 25px;">Loop:</span></b> A loop of a graph is a degenerate
+                edge that joins a vertex to itself, also called a self-loop.
+                <br />A
+                simple graph cannot contain any loops, but a multigraph can contain both multiple edges and loops.
+                <br /> <br />
+                <b><span style="color: #E89611; font-size: 25px;">Digraph:</span></b> A directed graph (or digraph) (V,
+                E) consists of a nonempty set of vertices V and a set of
+                directed edges (or arcs) E. Each directed edge is associated with an ordered pair of vertices.
+                The directed edge associated with the ordered pair (u, v) is said to start at u and end at v.
+                <br /> <br />
+            <div class="parent">
+                <img class="child" id="digraph" src="digraph.png">
+                <p class="child" id="fig">
+                    Fig 02: A simple directed graph
+                </p>
+            </div>
+            </p>
+            <br />
+            <p class="def">
+                A directed graph may contain loops and it may contain multiple directed edges that start and end at the
+                same vertices. A directed graph may also contain directed edges that connect vertices u and v in both
+                directions; that is, when a digraph contains an edge from u to v, it may also contain one or more edges
+                from v to u. For some models we may need a graph where some edges are undirected, while others are
+                directed. A graph with both directed and undirected edges is called a mixed graph.
+            </p>
+            <br /><br /><br /><br />
+        </div>
+    </div>
+</body>
+
+</html>
