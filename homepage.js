@@ -1,43 +1,43 @@
 const getTreeData = () => {
   return {
-    element: 'test',
+    element: 'A',
     left: {
-      element: 'test12',
+      element: 'B',
       left: {
-        element: 'test122',
+        element: 'B1',
       },
       right: {
-        element: 'test123',
+        element: 'B2',
       },
     },
     right: {
-      element: 'test13',
+      element: 'C',
       left: {
-        element: 'test132',
+        element: 'C1',
         left: {
-          element: 'test1321',
+          element: 'C11',
           left: {
-            element: 'test13211',
+            element: 'C12',
           },
         },
       },
       right: {
-        element: 'test133',
+        element: 'C2',
         left: {
-          element: 'test1332',
+          element: 'C21',
         },
         right: {
-          element: 'test1333',
+          element: 'C22',
           left: {
-            element: 'test1321',
+            element: 'C221',
             left: {
-              element: 'test13211',
+              element: 'C2211',
             },
           },
           right: {
-            element: 'test1321',
+            element: 'C222',
             right: {
-              element: 'test13211',
+              element: 'C2221',
             },
           },
         },
@@ -47,7 +47,7 @@ const getTreeData = () => {
 };
 
 export const renderBinaryTree = (node) => {
-  const { left, right, element } = node;
+  const { left, right, element} = node;
   return `
     <div class="node__element">${element}</div>
     ${
