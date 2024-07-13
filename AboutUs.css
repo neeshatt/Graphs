@@ -1,17 +1,15 @@
 .header-container {
     margin-left: 100px;
-    margin-top: 94px;
+    margin-top: 70px;
 }
 
 #header {
     display: inline-block;
     color: #00BFFF;
-    letter-spacing: 5px;
     font-family: Roboto Mono;
     font-size: 40px;
     position: relative;
     width: max-content;
-    font-weight: bolder;
 }
 
 .parent {
@@ -26,7 +24,7 @@
     padding: 1rem 1rem;
     vertical-align: middle;
     padding-left: 170px;
-    padding-top: 100px;
+    padding-top: 80px;
 }
 
 #rubaidimg,
