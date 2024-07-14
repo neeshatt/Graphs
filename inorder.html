@@ -29,7 +29,7 @@
         </nav>
     </header>
     <h2 id="head"> In Order Traversal </h2>
-    <div class="container">
+    <div class="container2">
         <div class="left">
             <label><i class="fa-brands fa-js" style="color: #FFD43B;"></i>Javascript</label>
             <textarea id="js-code"></textarea>
@@ -40,72 +40,10 @@
             <iframe id="output"></iframe>
         </div>
     </div>
-
-    <script>
-        let nodes = {};
-        let currentNode = null;
-
-        function start() {
-            promptUser("Node");
-        }
-
-        function promptUser(prompt) {
-            let userInput = prompt(prompt);
-            if (prompt === "Node") {
-                nodes[userInput] = {};
-                printOutput(`Node: ${userInput}`);
-                promptUser("Edges");
-            } else if (prompt === "Edges") {
-                let edges = userInput.split(",");
-                for (let edge of edges) {
-                    nodes[edge] = {};
-                }
-                printOutput(`Edges: ${userInput}`);
-                promptUser("Now you are going to build the tree. Put the values of the nodes.");
-            } else {
-                currentNode = userInput;
-                printOutput(`Now you are going to build the tree. Put the values of the nodes.`);
-                promptUser(`Value: `);
-            }
-        }
-
-        function promptValue() {
-            let value = prompt(`Value: `);
-            nodes[currentNode].value = value;
-            printOutput(`Value: ${value}`);
-            promptLeft(`Node left of ${value}: `);
-        }
-
-        function promptLeft(prompt) {
-            let left = prompt(prompt);
-            if (left!== "-1") {
-                nodes[currentNode].left = left;
-                currentNode = left;
-                printOutput(`Node left of ${nodes[currentNode].value}: ${left}`);
-                promptValue();
-            } else {
-                promptRight(`Node right of ${nodes[currentNode].value}: `);
-            }
-        }
-
-        function promptRight(prompt) {
-            let right = prompt(prompt);
-            if (right!== "-1") {
-                nodes[currentNode].right = right;
-                currentNode = right;
-                printOutput(`Node right of ${nodes[currentNode].value}: ${right}`);
-                promptValue();
-            } else {
-                printOutput("Tree built successfully!");
-                printOutput(JSON.stringify(nodes, null, 2));
-            }
-        }
-
-        function printOutput(text) {
-            let output = document.getElementById("output");
-            output.contentWindow.document.body.innerHTML += `<p>${text}</p>`;
-        }
-    </script>
+    <div class="container">     
+        <div class="tree"></div>
+    </div>
+    <script defer type="module" src="inorder.js"></script>
     <!--<script defer type="module" src="inorder.js"></script>-->
 </body>
 </html>
