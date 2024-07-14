@@ -7,6 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="pointzero.css">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
     <title>Point Zero</title>
 </head>
 
@@ -15,7 +16,7 @@
         <!--Image-->
         <div>
             <h2 id="h" align="left">DotConnect</h2>
-            <img id="logo" src="line-chart.png">
+            <img id="logo" src="images/line-chart.png">
         </div>
         <nav>
             <ul class="nav_links">
@@ -38,7 +39,7 @@
             diagrammatic form as a set of dots or circles for the vertices, joined by lines or curves for the edges.
         </p>
         <div class="parent">
-            <img class="child" src="graph.png">
+            <img class="child" src="images/graph.png">
             <p class="child" id="fig">Fig 01: a graph with six vertices and seven edges:
                 <br> V = {1, 2, 3, 4, 5, 6}
                 <br> E = {{1,2}, {2,3}, {3,4}, {4,5}, {4,6}, {1,5}, {2,5}}
@@ -65,9 +66,9 @@
                 edges as m different copies of an edge {u, v}.
             </p>
             <br /><br />
-            <img id="simple" src="simplegraph.png">
-            <img id="multi" src="multigraph.png">
-            <img id="multi" src="loop.png">
+            <img id="simple" src="images/simplegraph.png">
+            <img id="multi" src="images/multigraph.png">
+            <img id="multi" src="images/loop.png">
             <br /><br /> <br />
             <p class="def">
                 <b><span style="color: #E89611; font-size: 25px;">Loop:</span></b> A loop of a graph is a degenerate
@@ -81,7 +82,7 @@
                 The directed edge associated with the ordered pair (u, v) is said to start at u and end at v.
                 <br /> <br />
             <div class="parent">
-                <img class="child" id="digraph" src="digraph.png">
+                <img class="child" id="digraph" src="images/digraph.png">
                 <p class="child" id="fig">
                     Fig 02: A simple directed graph
                 </p>
@@ -100,15 +101,19 @@
                 <b><span style="color: #E89611; font-size: 25px;">Adjacents & Neighbours:</span></b> When u and v are
                 the endpoints of an edge e, such an edge e is called incident with the vertices u
                 and v; u &#8660 v, u is adjacent to v and are neighbours.
-                    <br /><br />
-                    The set of all neighbors of a vertex v of G = (V,E), denoted by N(v), is called the
-                    <b><span style="color: #E89611">neighborhood</span></b> of v. If A is a subset of V, we denote by
-                    N(A) the set of all vertices in G that are adjacent to at least one vertex in A. So, N(A) =
-                    <b>⋃</b>v∈A N(v)
+                <br /><br />
+                The set of all neighbors of a vertex v of G = (V,E), denoted by N(v), is called the
+                <b><span style="color: #E89611">neighborhood</span></b> of v. If A is a subset of V, we denote by
+                N(A) the set of all vertices in G that are adjacent to at least one vertex in A. So, N(A) =
+                <b>⋃</b>v∈A N(v)
             </p>
             <br /><br /><br /><br />
         </div>
     </div>
+    <div class="container">
+        <div class="tree"></div>
+    </div>
+    <script defer type="module" src="pointzero.js"></script>
 </body>
 
 </html>

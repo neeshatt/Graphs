@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="trees.css">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+    <title>Philosophia Botanica</title>
+</head>
+
+<body bgcolor="#012169">
+    <header>
+        <!--Image-->
+        <div>
+            <h2 id="h" align="left">DotConnect</h2>
+            <img id="logo" src="images/line-chart.png">
+        </div>
+        <nav>
+            <ul class="nav_links">
+                <li><a href="homepage.html"> Home </a></li>
+                <li><a href="problemset.html"> Problemset </a></li>
+                <li><a href="IDE.html"> IDE </a></li>
+                <li><a href="AboutUs.html"> About us </a></li>
+            </ul>
+        </nav>
+    </header>
+    <div>
+        <h class="define">Philosophia Botanica</h>
+        <br /><br /><br /><br />
+        <p class="text">
+            <b><span style="color: #E89611; font-size: 25px;">
+                    <h>Tree:</h>
+                </span></b><br /><br />
+            A tree is a connected undirected graph with no simple circuits. Because a tree cannot have a simple circuit,
+            a tree
+            cannot contain multiple edges or loops. Therefore any tree must be a simple graph. It is a connected acyclic
+            graph.
+        </p> <br /><br /><br />
+        <div class="parent">
+            <img class="child" id="tree" src="images/tree.png">
+            <p class="child" id="fig">
+                Fig 01: a tree
+            </p>
+        </div>
+        <br /><br /> <br /> <br />
+        <p class="text">
+            <b><span style="color: #E89611; font-size: 25px;">
+                    <h>Theorem:</h>
+                </span></b><br /><br />
+            An undirected graph is a tree if and only if there is a unique simple path between any two of its vertices.
+            <br /><br />
+            <span style="color:#E89611">Proof:</span>
+            If T is a tree, then T is a connected graph with no simple circuits. Let x
+            and y be two vertices of T. Because T is connected, there is a
+            simple path between x and y. Moreover, this path must be unique, for if there were a second
+            such path, the path formed by combining the first path from x to y followed by the path from y
+            to x obtained by reversing the order of the second path from x to y would form a circuit. This
+            implies, that there is a simple circuit in T, which cannot be. Hence, there is a
+            unique simple path between any two vertices of a tree.<br /><br />
+            Now assuming that there is a unique simple path between any two vertices of a graph T,
+            T is connected, because there is a path between any two of its vertices. Furthermore, T
+            can have no simple circuits. To see that this is true, if T had a simple circuit that contained
+            the vertices x and y, then there would be two simple paths between x and y, because the simple
+            circuit is made up of a simple path from x to y and a second simple path from y to x. Hence, a
+            graph with a unique simple path between any two vertices is a tree.<br /><br /><br />
+            <b><span style="color: #E89611; font-size: 25px;">
+                    <h>Forests:</h>
+                </span></b><br /><br />
+            Graphs containing no simple circuits that are not necessarily connected are called forests and have the
+            property that each of their connected components is a tree. Hence, a disjoint collection of trees is known
+            as forest.
+        </p><br /><br />
+        <div class="parent">
+            <img class="child" id="forest" src="images/forest.png">
+            <p class="child" id="fig">
+                Fig 02: a forest of two trees
+            </p>
+        </div><br /><br /><br />
+        <p class="text">
+            <b><span style="color: #E89611; font-size: 25px;">
+                    <h>Root & Rooted Tree:</h>
+                </span></b><br /><br />
+            A tree is rooted if it comes with a specified vertex, called the root. Here, one vertex, namely the root, is
+            distinguished for all the other vertices. Every edge is directed away from the root. An unrooted tree can be
+            turned into a rooted tree by choosing any vertex as the root. Different choices of the root produce
+            different rooted trees.
+        </p>
+        <br /><br />
+        <div class="parent">
+            <img class="child" id="rooted" src="images/rooted.png">
+            <p class="child" id="fig1">
+                <br />
+                Fig 03: with root a, with root c
+            </p>
+        </div><br /><br /><br />
+        <p class="text">
+            If v is a vertex in a tree, then, <br />
+            the <span style="color:#E89611">parent</span> of v is the unique vertex u such that there
+            is a directed edge from u to v. When u is the parent of v, v is called a <span
+                style="color:#E89611">child</span> of u.
+            Vertices with the same parent are called <span style="color:#E89611">siblings</span>. <br />
+            <br />
+            The <span style="color:#E89611">ancestors</span> of a vertex other than the root are the vertices in the
+            path from the root to this vertex,
+            excluding the vertex itself and including the root (that is, its parent, its parent’s parent, and so
+            on, until the root is reached). The <span style="color:#E89611">descendants</span> of a vertex v are those
+            vertices that have v as
+            an ancestor. A vertex of a rooted tree is called a <span style="color:#E89611">leaf</span> if it has no
+            children. Vertices that have
+            children are called <span style="color:#E89611">internal vertices</span>. The root is an internal vertex
+            unless it is the only vertex
+            in the graph, in which case it is a leaf.
+            <br /><br /><br />
+        </p>
+        <div class="parent">
+            <img class="child" id="names" src="images/names.png">
+            <p class="child" id="fig">
+                <br />
+                Fig 04: The parent of c is b. <br/>The children of g are h, i, and j.<br /> The siblings of h are i and j.<br/>
+                The ancestors of e are c, b, and a.<br/> The descendants of b are c, d, and e. <br/>The internal vertices
+                are a, b, c, g, h, and j. <br/>The leaves are d, e, f, i, k, l, and m.
+            </p>
+        </div><br /><br /><br />
+        <p class="text">
+            <b><span style="color: #E89611; font-size: 25px;">
+                    <h>Subtree:</h>
+                </span></b><br /><br />
+            If a is a vertex in a tree, the subtree with a as its root is the subgraph of the tree consisting
+            of a and its descendants and all edges incident to these descendants.
+        </p><br/><br/><br/><br/>
+    </div>
+</body>
+
+</html>

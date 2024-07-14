@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="walkthewalk.css">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+    <title>Walk The Walk</title>
+</head>
+
+<body bgcolor="#012169">
+    <header>
+        <!--Image-->
+        <div>
+            <h2 id="h" align="left">DotConnect</h2>
+            <img id="logo" src="images/line-chart.png">
+        </div>
+        <nav>
+            <ul class="nav_links">
+                <li><a href="homepage.html"> Home </a></li>
+                <li><a href="problemset.html"> Problemset </a></li>
+                <li><a href="IDE.html"> IDE </a></li>
+                <li><a href="AboutUs.html"> About us </a></li>
+            </ul>
+        </nav>
+    </header>
+    <div>
+        <h class="define">Walk The Walk: Definitions</h>
+        <br /><br /><br /><br />
+        <p class="text">
+            <b><span style="color: #E89611; font-size: 25px;">
+                    <h>Walk:</h>
+                </span></b><br /><br />
+            A walk can be defined as a sequence of edges and vertices of a graph. When we have a graph and traverse it,
+            then
+            that traverse will be known as a walk. In a walk, there can be repeated edges and vertices. The number of
+            edges
+            which is covered in a walk will be known as the Length of the walk. In a graph, there can be more than one
+            walk.
+            There are two types of the walk: <br />
+            1. Open Walk <br />
+            2. Closed Walk <br />
+        </p> <br /><br /><br />
+        <div class="parent">
+            <img class="child" id="walk" src="images/walk.png">
+            <p class="child" id="fig">Fig 01: a simple graph with many walks, <br />some of them are:<br /> A, B, C, E,
+                D (length = 4) <br /> D, B, A, C, E, D,
+                C (length = 7) <br /> E, C, B, A, C, E, D (length = 6)
+                <br /> Closed walk = A, B, D, E, C, A <br />
+                Open walk = A, B, C, E, D, B
+            </p>
+        </div>
+        <br /><br /> <br /> <br />
+        <p class="text">
+            A walk will be known as an <span style="color: #E89611;">open walk</span> if the vertices at which the walk
+            starts and ends are different. That means for an open walk, the starting vertex and ending vertex must be
+            different. In an open walk, the length of the walk must be more than 0.
+            <br /><br />
+            A walk will be known as a <span style="color: #E89611;">closed walk</span> if the
+            vertices at which the walk starts and ends
+            are identical. That means for a closed walk, the starting vertex and ending vertex must be the same.
+            <br /> <br />In case of the open walk and closed walk, the edges and vertices can be repeated.
+        </p>
+        <br /><br /><br />
+        <p class="text">
+            <b><span style="color: #E89611; font-size: 25px;">
+                    <h>Path & Trail:</h>
+                </span></b><br /><br />
+            A <span style="color: #E89611;">path</span> is a walk such that all nodes are distinct. Let n be a
+            nonnegative integer and G an undirected graph.
+            A path of length n from u
+            to v in G is a sequence of n edges e<sub>1</sub>,…,e<sub>n</sub> of G for which there exists a sequence
+            x<sub>0</sub> = u, x<sub>1</sub>, ..., x<sub>n-1</sub>, x<sub>n</sub> = v of vertices such that
+            e<sub>i</sub> has, for i =
+            1, ..., n, the endpoints x<sub>i-1</sub> and x<sub>i</sub>, no vertices may be repeated.
+            <br /> A <span style="color: #E89611;">trail</span> is a walk such that all edges are distinct, vertex can
+            be repeated.
+            <b><span style="color: #E89611; font-size: 25px;"> <br/><br/><br/>
+                    <h>Cycle & Circuit:</h>
+                </span></b><br /><br />
+            A <span style="color: #E89611;">cycle</span> is a path that is closed. Length of a cycle = Number of edges.
+            A <span style="color: #E89611;">circuit</span> is a trail that is closed.
+            <br />
+            <br />
+            <br />
+            <b><span style="color: #E89611; font-size: 25px;">
+                    <h>Euler Trail & Euler Circuit:</h>
+                </span></b><br /><br />
+            An <span style="color: #E89611;">Euler trail</span> is a trail that visits each node exactly once.
+            An <span style="color: #E89611;">Euler circuit</span> is a circuit that visits each edge exactly once.
+        </p>
+        <br/><br/><br/><br/><br/><br/>
+    </div>
+</body>
+
+</html>
