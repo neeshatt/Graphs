@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="degree.css">
+    <title>Degree</title>
+</head>
+
+<body bgcolor="#012169">
+    <header>
+        <!--Image-->
+        <div>
+            <h2 id="h" align="left">DotConnect</h2>
+            <img id="logo" src="line-chart.png">
+        </div>
+        <nav>
+            <ul class="nav_links">
+                <li><a href="homepage.html"> Home </a></li>
+                <li><a href="problemset.html"> Problemset </a></li>
+                <li><a href="IDE.html"> IDE </a></li>
+                <li><a href="AboutUs.html"> About us </a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="whole">
+        <h class="define">Incidence and Degree</h>
+        <br>
+        <p class="text">
+            The vertices v and w are said to be incident with the edge vw; the edge
+            vw is incident with each vertex. Two vertices are adjacent if they are the end
+            vertices of an edge; two edges are adjacent if they have a vertex in common.
+            <br /><br />
+            The degree or valency of a vertex, denoted <b><i>deg v</i></b>, is the number of edges that are incident to
+            it, where a loop is counted
+            twice. The degree of a graph is the maximum of the degrees of its vertices. If <b><i>deg v</i></b> is an
+            even number, then
+            v is said to be an even
+            vertex; if <b><i>deg v</i></b> is an odd number, vertex v is odd. A vertex of degree 0 is said
+            to be isolated.
+        </p>
+        <div class="parent">
+            <img class="child" id="adjacent" src="adjacent.png">
+            <p class="child" id="fig">Fig 01: v<sub>4</sub> and v<sub>5</sub> are adjacent, but v<sub>1</sub> and
+                v<sub>4</sub> are not. <br /> deg(v<sub>1</sub>) = deg(v<sub>3</sub>) = deg(v<sub>4</sub>) = 3 <br />
+                deg(v<sub>2</sub>) = 4 <br /> deg(v<sub>5</sub>) = 1 (pendant) <br />
+            </p>
+        </div>
+        <br />
+        <br />
+        <div>
+            <p class="def">
+                A vertex of degree zero is called isolated. A vertex is pendant if and only
+                if it has degree one. Consequently, a pendant vertex is adjacent to exactly one other vertex.
+            </p>
+            <br /><br />
+            <p class="def">
+                <b><span style="color: #E89611; font-size: 25px;">
+                        <h>The HandShaking Theorem:</h>
+                    </span></b><br /><br />
+                Each edge contributes two to the sum of the degrees of the vertices because an edge is incident with
+                exactly two (possibly equal) vertices. This means that the sum of the degrees of the vertices
+                is twice the number of edges. Let G=(V,E) be an undirected graph with m
+                edges. Then, 2m = &#8721<sub>v&#949V</sub> deg(v)<br /> This applies even if multiple edges and loops
+                are present.
+                <br /> <br />In Fig 01: <br /> <span style="color:#E89611"><br />
+                    deg(v<sub>1</sub>) + deg(v<sub>2</sub>) + deg(v<sub>3</sub>) + deg(v<sub>4</sub>) +
+                    deg(v<sub>5</sub>) =
+                    14 </span>; twice the number of edges.
+                <br /><br /> <br /><br />
+                <b><span style="color: #E89611; font-size: 25px;">
+                        <h>The HandShaking Lemma:</h>
+                    </span></b><br /><br />
+                An undirected graph has an even number of vertices of odd degree.
+                <br /><span style="color:#E89611"><br />Proof:</span>
+                Let V<sub>1</sub> and V<sub>2</sub> be the set of vertices of even degree and the set of vertices of odd
+                degree,
+                respectively, in an undirected graph G = (V, E) with m edges. Then, <br /><br /> 2m =
+                &#8721<sub>v&#949V</sub> deg(v) = &#8721<sub>v&#949V<sub>1</sub></sub> deg(v) +
+                &#8721<sub>v&#949V<sub>2</sub></sub> deg(v)
+                <br /><br />
+                Because deg(v) is even for v ∈ V<sub>1</sub>, the first term in the right-hand side of the last equality
+                is
+                even. Furthermore, the sum of the two terms on the right-hand side of the last equality is even,
+                because this sum is 2m. Hence, the second term in the sum is also even. Because all the terms in
+                this sum are odd, there must be an even number of such terms. Thus, there are an even number
+                of vertices of odd degree.
+                <br /><br /><br /><br />
+                <b><span style="color: #E89611; font-size: 25px;">
+                        <h>Degrees in a Digraph (Directed Graph):</h>
+                    </span></b><br />
+                <br /><span style="color:#E89611"><br />In-Degree & Out-Degree:</span>
+                <br /> <br />
+                When (u,v) is an edge of the graph G with directed edges, u is said to be adjacent to v and v
+                is said to be adjacent from u. The vertex u is called the initial vertex of (u,v), and v is called
+                the terminal or end vertex of (u,v). The initial vertex and terminal vertex of a loop are the
+                same.<br /><br />
+                In a graph with directed edges the <i><span style="color:#E89611">in-degree</span></i> of a vertex v,
+                denoted by deg<sup>−</sup>(v), is the number
+                of edges with v as their terminal vertex. The <i><span style="color:#E89611">out-degree</span></i> of v,
+                denoted by deg<sup>+</sup>(v), is the
+                number of edges with v as their initial vertex.
+            </p>
+        </div>
+        <div class="parent">
+            <img class="child" id="inout" src="inout.png">
+            <p class="child" id="fig">Fig 02: In-degrees: <br />
+                deg<sup>−</sup>(a) = 2, deg<sup>−</sup>(b) = 2, deg<sup>−</sup>(c) = 3, <br />deg<sup>−</sup>(d) = 2,
+                deg<sup>−</sup>(e) = 3, deg<sup>−</sup>(f) = 0
+                <br />
+                Out-degrees: <br />
+                deg<sup>+</sup>(a) = 4, deg<sup>+</sup>(b) = 1, deg<sup>+</sup>(c) = 2, <br />deg<sup>+</sup>(d) = 2,
+                deg<sup>+</sup>(e) = 3, deg<sup>+</sup>(f) = 0
+            </p> <br /><br /><br /><br />
+        </div>
+        <div>
+            <p class="def">
+                <b><span style="color: #E89611; font-size: 25px;">
+                        <h>Theorem:</h>
+                    </span> </b><br />
+                <br />
+                Let G = (V,E) be a graph with directed edges. Then, &#8721<sub>v&#949V</sub> deg<sup>−</sup>(v) =
+                &#8721<sub>v&#949V</sub> deg<sup>+</sup>(v) = |E| <br />
+                <br />
+                Because each edge has an initial vertex and a terminal vertex, the sum of the in-degrees and
+                the sum of the out-degrees of all vertices in a graph with directed edges are the same. Both of
+                these sums are the number of edges in the graph.
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>
