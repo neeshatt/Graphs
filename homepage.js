@@ -1,83 +1,87 @@
 const getTreeData = () => {
-return {
-  element: 'A',
-  left: {
-    element: 'B',
+  return {
+      text: 'Point Zero',
+      link: "problemset.html",
     left: {
-      element: 'B1',
-    },
-    right: {
-      element: 'B2',
-    },
-  },
-  right: {
-    element: 'C',
-    left: {
-      element: 'C1',
+      text: 'test12',
       left: {
-        element: 'C11',
-        left: {
-          element: 'C12',
-        },
-      },
-    },
-    right: {
-      element: 'C2',
-      left: {
-        element: 'C21',
+        text: 'test122',
       },
       right: {
-        element: 'C22',
+        text: 'test123',
+      },
+    },
+    right: {
+      text: 'test13',
+      left: {
+        text: 'test132',
         left: {
-          element: 'C221',
+          text: 'test1321',
           left: {
-            element: 'C2211',
+            text: 'test13211',
           },
         },
+      },
+      right: {
+        text: 'test133',
+        left: {
+          text: 'test1332',
+        },
         right: {
-          element: 'C222',
+          text: 'test1333',
+          left: {
+            text: 'test1321',
+            left: {
+              text: 'test13211',
+            },
+          },
           right: {
-            element: 'C2221',
+            text: 'test1321',
+            right: {
+              text: 'test13211',
+            },
           },
         },
       },
     },
-  },
-};
+  };
 };
 
-export const renderBinaryTree = (node) => {
-const { left, right, element} = node;
-return `
-  <div class="node__element">${element}</div>
-  ${
-    left || right
-      ? `
-        <div class="node__bottom-line"></div>
-        <div class="node__children">
-          ${
-            left
-              ? `
-              <div class="node node--left">
-                ${renderBinaryTree(left)}
-              </div>
-              `
-              : ''
-          }
-          ${
-            right
-              ? `
-              <div class="node node--right">
-                ${renderBinaryTree(right)}
-              </div>
-              `
-              : ''
-          }
-        </div>
-      `
-      : ''
-  }
-`;
+const renderBinaryTree = (node) => {
+  const { left, right, text, link } = node;
+  const textElement = link
+   ? `<div class="node__element"><a href="#" onclick="window.location.href='${link}'; return false;" class=node__link>${text}</a></div>`
+    : `<div class="node__element">${text}</div>`;
+  return `
+    ${textElement}
+    ${
+      left || right
+        ? `
+          <div class="node__bottom-line"></div>
+          <div class="node__children">
+            ${
+              left
+                ? `
+                <div class="node node--left">
+                  ${renderBinaryTree(left)}
+                </div>
+                `
+                : ''
+            }
+            ${
+              right
+                ? `
+                <div class="node node--right">
+                  ${renderBinaryTree(right)}
+                </div>
+                `
+                : ''
+            }
+          </div>
+        `
+        : ''
+    }
+  `;
 };
 
 const main = () => {

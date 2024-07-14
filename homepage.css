@@ -17,6 +17,10 @@
   height: 100px;
 }
 
+h1{
+  color: #E89611;
+}
+
 
 li, a{
     color: white;
@@ -177,6 +181,12 @@ header{
   text-align: center;
 }
 
+.node__link{
+  background-color: cyan;
+  color: #012169;
+  font-size: 20px;
+}
+
 .node__bottom-line {
   height: 20px;
   width: 1px;
@@ -217,5 +227,4 @@ header{
   border-top-width: 2px;
   border-color: var(--dark);
 }
-
 
