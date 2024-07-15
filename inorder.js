@@ -5,10 +5,14 @@ let currentNode = null;
 let parentStack = [];
 let buildStep = 'root';
 let isFirstStart = true;
+let rootNode;
+
+// Ensure the iframe is ready
+document.getElementById('log').contentDocument.body.innerHTML = '';
 
 document.getElementById("run-js").addEventListener("click", function() {
     let jsCode = document.getElementById("js-code");
-    let output = document.getElementById("output");
+    let output = document.getElementById("log");
     let startButton = document.getElementById("run-js");
     let treeElement = document.querySelector('.tree');
 
@@ -18,13 +22,15 @@ document.getElementById("run-js").addEventListener("click", function() {
     }
 
     jsCode.value = "Enter nodes: ";
-    output.contentWindow.document.body.innerHTML = ""; // Clear the output
+    output.contentDocument.body.innerHTML = ""; // Clear the output
     treeElement.innerHTML = ""; // Clear the tree visualization
+    document.getElementById("outputbox").value = ""; // Clear the inorder traversal output
     inputStep = 0;
     nodes = {};
     currentNode = null;
     parentStack = [];
     buildStep = 'root';
+    rootNode = null;
     jsCode.focus();
 });
 
@@ -60,33 +66,33 @@ function displayInstructions() {
 }
 
 function handleTreeInput(input) {
-    let value = input.split(":")[1].trim();
+    let value = input.split(":")[1] ? input.split(":")[1].trim() : input.trim();
     let jsCode = document.getElementById("js-code");
-    let output = document.getElementById("output");
+    let output = document.getElementById("log");
 
     console.log(`Handling input: ${value}, Current node: ${currentNode}, Build step: ${buildStep}`);
 
     if (buildStep === 'root') {
         nodes[value] = { value: value, left: null, right: null };
         currentNode = value;
+        rootNode = value;
         buildStep = 'left';
         jsCode.value += `\nEnter left child of ${value} (-1 for no child): `;
-        output.contentWindow.document.body.innerHTML += `<p>Root node ${value} added. Enter left child:</p>`;
+        output.contentDocument.body.innerHTML += `<p>Root node ${value} added. Enter left child:</p>`;
         console.log(`Root node ${value} added`);
     } else if (buildStep === 'left') {
         if (value === '-1') {
             buildStep = 'right';
             jsCode.value += `\nEnter right child of ${currentNode} (-1 for no child): `;
-            output.contentWindow.document.body.innerHTML += `<p>No left child. Enter right child of ${currentNode}:</p>`;
+            output.contentDocument.body.innerHTML += `<p>No left child. Enter right child of ${currentNode}:</p>`;
             console.log(`No left child for ${currentNode}`);
         } else {
             nodes[value] = { value: value, left: null, right: null };
             nodes[currentNode].left = value;
             parentStack.push(currentNode);
             currentNode = value;
-            buildStep = 'left';
             jsCode.value += `\nEnter left child of ${value} (-1 for no child): `;
-            output.contentWindow.document.body.innerHTML += `<p>Left child ${value} added. Enter its left child:</p>`;
+            output.contentDocument.body.innerHTML += `<p>Left child ${value} added. Enter its left child:</p>`;
             console.log(`Left child ${value} added to ${parentStack[parentStack.length-1]}`);
         }
     } else if (buildStep === 'right') {
@@ -95,7 +101,7 @@ function handleTreeInput(input) {
                 currentNode = parentStack.pop();
                 buildStep = 'right';
                 jsCode.value += `\nEnter right child of ${currentNode} (-1 for no child): `;
-                output.contentWindow.document.body.innerHTML += `<p>No right child. Moving back to ${currentNode}. Enter right child:</p>`;
+                output.contentDocument.body.innerHTML += `<p>No right child. Moving back to ${currentNode}. Enter right child:</p>`;
                 console.log(`No right child, moving back to ${currentNode}`);
             } else {
                 finishTreeConstruction();
@@ -107,25 +113,22 @@ function handleTreeInput(input) {
             currentNode = value;
             buildStep = 'left';
             jsCode.value += `\nEnter left child of ${value} (-1 for no child): `;
-            output.contentWindow.document.body.innerHTML += `<p>Right child ${value} added. Enter its left child:</p>`;
-            console.log(`Right child ${value} added to ${parentStack[parentStack.length-1] || 'root'}`);
+            output.contentDocument.body.innerHTML += `<p>Right child ${value} added. Enter its left child:</p>`;
+            console.log(`Right child ${value} added to ${parentStack[parentStack.length-1] || rootNode}`);
         }
     }
 
     console.log('Current tree structure:', JSON.stringify(nodes, null, 2));
+    updateVisualTree();
 }
 
 function inorderTraversal(rootNode) {
     let result = [];
     
     function traverse(nodeValue) {
-        if (!nodeValue || nodeValue === '-1') return;
+        if (!nodeValue) return;
         
         let node = nodes[nodeValue];
-        if (!node) {
-            console.error(`Node ${nodeValue} not found in the tree`);
-            return;
-        }
         
         // Traverse left subtree
         traverse(node.left);
@@ -145,35 +148,41 @@ function inorderTraversal(rootNode) {
 
 function finishTreeConstruction() {
     let jsCode = document.getElementById("js-code");
-    let output = document.getElementById("output");
+    let output = document.getElementById("log");
     jsCode.value += `\nTree construction complete.`;
     console.log("Final tree structure:", JSON.stringify(nodes, null, 2));
-    output.contentWindow.document.body.innerHTML += `<p>Tree construction complete. Here's the final tree structure:</p>
+    output.contentDocument.body.innerHTML += `<p>Tree construction complete. Here's the final tree structure:</p>
                                                      <pre>${JSON.stringify(nodes, null, 2)}</pre>`;
     
     // Perform inorder traversal
-    let rootNode = Object.keys(nodes)[0]; // Get the root node
     console.log("Root node:", rootNode);
     let traversalResult = inorderTraversal(rootNode);
     let traversalString = traversalResult.join(' --> ');
     
     console.log("Traversal result:", traversalString);
-    output.contentWindow.document.body.innerHTML += `<p>Inorder Traversal:</p>
-                                                     <p>${traversalString}</p>`;
+    document.getElementById("outputbox").value = `Inorder Traversal: ${traversalString}`;
 
-    // Render visual representation
-    renderVisualTree();
+    // Render final visual representation
+    updateVisualTree();
 
     // Reset the input step to allow for a new tree construction
     inputStep = 0;
     document.getElementById("run-js").textContent = "Reset";
 }
 
-function getTreeData() {
-    let rootNode = Object.keys(nodes)[0];
+function updateVisualTree() {
+    const treeData = getTreeData();
+    const treeElement = document.querySelector('.tree');
+    if (treeElement) {
+        treeElement.innerHTML = renderBinaryTree(treeData);
+    } else {
+        console.error("Tree element not found");
+    }
+}
 
+function getTreeData() {
     function buildTreeObject(nodeValue) {
-        if (!nodeValue || nodeValue === '-1') return null;
+        if (!nodeValue || !nodes[nodeValue]) return null;
 
         let node = nodes[nodeValue];
         return {
@@ -221,14 +230,4 @@ function renderBinaryTree(node) {
                 : ''
         }
     `;
-}
-
-function renderVisualTree() {
-    const treeData = getTreeData();
-    const treeElement = document.querySelector('.tree');
-    if (treeElement) {
-        treeElement.innerHTML = renderBinaryTree(treeData);
-    } else {
-        console.error("Tree element not found");
-    }
 }
