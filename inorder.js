@@ -61,7 +61,7 @@ function displayInstructions() {
     let jsCode = document.getElementById("js-code");
     jsCode.value += "\nNow let's build your tree first. You will provide us the value of the nodes first. " +
                     "We will go left first for every node. So when you don't want any child node just input -1. " +
-                    "We will then move right. And for simplicity just provide us with positive integers." +
+                    "We will then move right. And for simplicity just provide us with positive integers." + " Also keep in mind that you CAN'T HAVE MORE THAN ONE NODE OF THE SAME VALUE in the tree." + "\n" +
                     "\nEnter root node value: ";
 }
 
@@ -157,10 +157,10 @@ function finishTreeConstruction() {
     // Perform inorder traversal
     console.log("Root node:", rootNode);
     let traversalResult = inorderTraversal(rootNode);
-    let traversalString = traversalResult.join(' --> ');
+    let traversalString = traversalResult.join(' -> ');
     
     console.log("Traversal result:", traversalString);
-    document.getElementById("outputbox").value = `Inorder Traversal: ${traversalString}`;
+    document.getElementById("outputbox").value = `Your In Order Route Is: ${traversalString}`;
 
     // Render final visual representation
     updateVisualTree();
