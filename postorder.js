@@ -24,7 +24,7 @@ document.getElementById("run-js").addEventListener("click", function() {
     jsCode.value = "Enter nodes: ";
     output.contentDocument.body.innerHTML = ""; // Clear the output
     treeElement.innerHTML = ""; // Clear the tree visualization
-    document.getElementById("outputbox").value = ""; // Clear the inorder traversal output
+    document.getElementById("outputbox").value = ""; // Clear the postorder traversal output
     inputStep = 0;
     nodes = {};
     currentNode = null;
@@ -123,7 +123,7 @@ function handleTreeInput(input) {
     updateVisualTree();
 }
 
-function inorderTraversal(rootNode) {
+function postorderTraversal(rootNode) {
     let result = [];
     
     function traverse(nodeValue) {
@@ -133,17 +133,18 @@ function inorderTraversal(rootNode) {
         
         // Traverse left subtree
         traverse(node.left);
-        
-        // Visit the current node
-        result.push(nodeValue);
-        
+
         // Traverse right subtree
         traverse(node.right);
+        
+        // Visit the current node
+        result.push(nodeValue);    
+        
     }
     
-    console.log("Starting inorder traversal from root:", rootNode);
+    console.log("Starting postorder traversal from root:", rootNode);
     traverse(rootNode);
-    console.log("Finished inorder traversal, result:", result);
+    console.log("Finished postorder traversal, result:", result);
     return result;
 }
 
@@ -155,13 +156,13 @@ function finishTreeConstruction() {
     output.contentDocument.body.innerHTML += `<p>Tree construction complete. Here's the final tree structure:</p>
                                                      <pre>${JSON.stringify(nodes, null, 2)}</pre>`;
     
-    // Perform inorder traversal
+    // Perform postorder traversal
     console.log("Root node:", rootNode);
-    let traversalResult = inorderTraversal(rootNode);
+    let traversalResult = postorderTraversal(rootNode);
     let traversalString = traversalResult.join(' -> ');
     
     console.log("Traversal result:", traversalString);
-    document.getElementById("outputbox").value = `Your In Order Route Is: ${traversalString}`;
+    document.getElementById("outputbox").value = `Your Post Order Route Is: ${traversalString}`;
 
     // Render final visual representation
     updateVisualTree();
