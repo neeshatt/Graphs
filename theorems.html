@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="theorems.css">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+    <title>Tree-mendous Theorems</title>
+</head>
+
+<body bgcolor="#012169">
+    <header>
+        <!--Image-->
+        <div>
+            <h2 id="h" align="left">DotConnect</h2>
+            <img id="logo" src="images/line-chart.png">
+        </div>
+        <nav>
+            <ul class="nav_links">
+                <li><a href="homepage.html"> Home </a></li>
+                <li><a href="problemset.html"> Problemset </a></li>
+                <li><a href="IDE.html"> IDE </a></li>
+                <li><a href="AboutUs.html"> About us </a></li>
+            </ul>
+        </nav>
+    </header>
+    <div>
+        <h class="define">Tree-mendous Theorems</h>
+        <br /><br /><br /><br />
+        <p class="text">
+            <b><span style="color: #E89611; font-size: 25px;">
+                    <h>Theorem 1:</h>
+                </span></b>
+            There is one and only one path between every pair of vertices in a tree, T.
+            <br /><br />
+            <span style="color: #E89611;">Proof</span>: Since T is a connected graph, there must exist at least one path
+            between every pair of vertices in T. If there exists two distinct paths between vertices a & b, the union of
+            these two paths will contain a circuit, and T cannot be a tree.
+            <br /><br /><br /><br />
+            <b><span style="color: #E89611; font-size: 25px;">
+                    <h>Theorem 2:</h>
+                </span></b>
+            If in a graph G, there is one and only one path between every pair of vertices, then G is a tree.
+            <br /><br />
+            <span style="color: #E89611;">Proof</span>: Existence of a path between every pair of vertices assures that
+            G is connected. A cicuit in a graph implies that there is at least one pair of vertices a,b such that there
+            are two distinct paths between a and b. Since G has one and only one path between every pair of vertices, G
+            can have no circuits. Hence, G is a tree.
+            <br /><br /><br /><br />
+            <b><span style="color: #E89611; font-size: 25px;">
+                    <h>Theorem 3:</h>
+                </span></b>
+            A tree with n vertices has n - 1 edges.
+            <br /><br />
+            <span style="color: #E89611;">Proof</span>: We will use mathematical induction to prove this theorem.
+            <br /><br /><b>Basis Step</b>: When n = 1, a tree with n = 1 vertex has no edges. Theorem is true for n = 1.
+            <br /><br /><b>Inductive Step</b>: For n > 1, we suppose the implication holds true for graphs fewer than n
+            vertices. Given an acyclic graph G, if we separate a leaf v from G, G' = G - v also is connected &
+            acyclic. Applying the basis step to G' yields e(G') = n - 2, since only vertex is incident on v, we have,
+            e(G) = n -1.
+            <br /><br /><br /><br />
+            <b><span style="color: #E89611; font-size: 25px;">
+                    <h>Theorem 4:</h>
+                </span></b>
+            A full m-ary tree with i internal vertices contains n = mi + 1 vertices.
+            <br /><br />
+            <span style="color: #E89611;">Proof</span>: Every vertex, except the root, is the child of an internal
+            vertex. Because each of the i internal vertices has m children, there are mi vertices in the tree other than
+            the root. Therefore, the tree contains n = mi + 1 vertices.
+            <br /><br /><br /><br />
+            <b><span style="color: #E89611; font-size: 25px;">
+                    <h>Theorem 5:</h>
+                </span></b>
+            A full m-ary tree with:
+            <br /><br />
+            (1) n vertices has i = (n − 1)∕m internal vertices and l = [(m − 1)n + 1]∕m leaves
+            <br/>
+            (2) i internal vertices has n = mi + 1 vertices and l = (m − 1)i + 1 leaves
+            <br/>
+            (3) l leaves has n = (ml − 1)∕(m − 1) vertices and i = (l − 1)∕(m − 1) internal vertices
+            <br /><br /><br /><br />
+        </p> <br /><br /><br />
+    </div>
+</body>
+
+</html>
