@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="binary.css">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+    <title>Double Trouble</title>
+</head>
+
+<body bgcolor="#012169">
+    <header>
+        <!--Image-->
+        <div>
+            <h2 id="h" align="left">DotConnect</h2>
+            <img id="logo" src="images/line-chart.png">
+        </div>
+        <nav>
+            <ul class="nav_links">
+                <li><a href="homepage.html"> Home </a></li>
+                <li><a href="problemset.html"> Problemset </a></li>
+                <li><a href="IDE.html"> IDE </a></li>
+                <li><a href="AboutUs.html"> About us </a></li>
+            </ul>
+        </nav>
+    </header>
+    <div>
+        <h class="define">Double Trouble: Binary Trees</h>
+        <br /><br /><br /><br />
+        <p class="text">
+            <b><span style="color: #E89611; font-size: 25px;">
+                    <h>M-ary Tree:</h>
+                </span></b><br /><br />
+            A rooted tree is called an m-ary tree if every internal vertex has no more than m children.
+            The tree is called a full m-ary tree if every internal vertex has exactly m children.
+        </p> <br /><br /><br />
+        <div class="parent">
+            <img class="child" id="mary" src="images/mary.png">
+            <p class="child" id="fig1">
+                Fig 01:<br /> In T3 each internal vertex has five<br /> children, so T3 is a full 5-ary tree. <br />T4
+                is not
+                a full m-ary
+                tree for any m <br />because some of
+                its internal vertices <br />have two children and others have <br />three children.
+            </p>
+        </div><br /><br /><br /><br />
+        <p class="text">
+            <b><span style="color: #E89611; font-size: 25px;">
+                    <h>Binary Tree:</h>
+                </span></b><br /><br />
+            An m-ary tree with m = 2 is called a binary tree. A binary tree is defined as a tree in which there is
+            exactly one vertex of degree two, and each of the remaining vertices is of degree one or three. Since the
+            vertex of degree two is distinct from all other vertices, this vertex serves as a root.
+        </p> <br /><br /><br />
+        <div class="parent">
+            <img class="child" id="binary" src="images/binary.png">
+            <p class="child" id="fig">
+                Fig 02: a binary tree
+            </p>
+        </div><br /><br /><br /><br />
+        <p class="text">
+            An internal vertex has two children, the first child is called the left child and the second child is called
+            the right child. The tree rooted at the left child of a vertex is called the left subtree of this vertex,
+            and the tree rooted at the right child of a vertex is called the right subtree of the vertex.
+            <br /><br />
+            <span style="color: #E89611; font-size: 25px;">
+                <h>Properties of a Full Binary Tree:</h>
+            </span><br />
+            1. The number of vertices in a full binary tree is always odd. <br />
+            2. A binary tree with n vertices has n−1 edges.<br />
+            3. i internal vertices contains n = 2i + 1 vertices.<br />
+            4. n vertices has i = (n − 1) ∕ 2 internal vertices and l = [n + 1] ∕ 2 leaves <br />
+        </p> <br /><br /><br />
+        <p class="text">
+            <b><span style="color: #E89611; font-size: 25px;">
+                    <h>Binary Search Tree:</h>
+                </span></b><br /><br />
+            Binary search tree (BST), also called ordered or sorted binary tree, is a rooted binary tree data
+            structure with the key of each internal node being greater than all the keys in the respective node's left
+            subtree and less than the ones in its right subtree.
+        </p> <br /><br /><br />
+        <div class="parent">
+            <img class="child" id="bstalpha" src="images/bstalpha.png">
+            <p class="child" id="fig">
+                Fig 03: a binary search tree using alphabetical order
+            </p>
+        </div><br /><br /><br /><br />
+        <p class="text">
+            Each node in a Binary Search Tree has at most two children, a left child and a right child, with the left
+            child containing values less than the parent node and the right child containing values greater than the
+            parent node.
+            <br />
+            <br /><br />
+            To add a new item to a BST, we first compare it with the keys of vertices already in the tree,
+            starting at the root and moving to the left if the item is less than the key of the respective vertex
+            (if this vertex has a left child), or moving to the right if the item is greater than the key of the
+            respective vertex (if this vertex has a right child). When the item is less than the respective vertex
+            and this vertex has no left child, then a new vertex with this item as its key is inserted as a
+            new left child. Similarly, when the item is greater than the respective vertex and this vertex has
+            no right child, then a new vertex with this item as its key is inserted as a new right child.
+        </p>
+        <div class="parent">
+            <img class="child" id="bst" src="images/bst.png">
+            <p class="child" id="fig">
+                Fig 04: a binary search tree, <br /> each vertex is larger than its left <br /> and smaller than its
+                right vertex
+            </p>
+        </div><br /><br /><br /><br /><br/>
+        <p class="text">
+            <b><span style="color: #E89611; font-size: 25px;">
+                    <h>Predecessor & Successor:</h>
+                </span></b><br /><br />
+            In a BST, the predecessor of the current node is the <span style="color: #E89611;">right-most/largest
+                leaf</span> node in the left subtree, the successor of the current node is the <span
+                style="color: #E89611;">left-most/smallest leaf</span> node in the right subtree.
+        </p><br/><br/><br/><br/>
+    </div>
+</body>
+
+</html>
