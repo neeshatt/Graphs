@@ -34,21 +34,167 @@
             <b><span style="color: #E89611; font-size: 25px;">
                     <h>Spanning Tree:</h>
                 </span></b>
-            Let G be a simple graph. A spanning tree of G is a subgraph of G that is a tree containing
+            Let G be a simple graph. A spanning tree of G is a subgraph of G that is a tree (no cycles) containing
             every vertex of G.
         </p>
         <br /><br /><br />
         <div class="parent">
             <img class="child" id="span" src="images/span.png">
-            <p class="child" id="fig">Fig 01: A spanning tree (blue heavy edges) <br/>of a grid graph
+            <p class="child" id="fig">Fig 01: A spanning tree (blue heavy edges) <br />of a grid graph
             </p>
         </div>
+        <br /><br /><br /><br />
+        <p class="text">
+            One way to create spanning trees is to identify circuits and remvoing them, as in more than one path from
+            one vertex to another, and simply removing relevant edges, would give us a spanning tree of said graph.
+            <br /><br />
+        </p>
+        <div class="parent">
+            <img class="child" id="onespan" src="images/onespan.png">
+            <img class="child" id="threespan" src="images/threespan.png">
+            <img class="child" id="twospan" src="images/twospan.png">
+        </div> <br /><br /><br /><br />
+        <p class="text">
+            <b><span style="color: #E89611; font-size: 25px;">
+                    <h>Theorem:</h>
+                </span></b>
+            A simple graph is connected if and only if it has a spanning tree.
+            <br /><br /><br />
+            <span style="color:#E89611">
+                Proof:
+            </span>
+            Supposing that a simple graph G has a spanning tree T, (it contains every vertex of G),
+            there should be a path in T between any two of its vertices. Because T is a subgraph of G,
+            there is a path in G between any two of its vertices. Hence, G is connected.
+            <br /><br />
+            Now, if G is connected and G is not a tree, it must contain a simple circuit. Removing
+            an edge from one of these simple circuits, the resulting subgraph has one fewer edge but still
+            contains all the vertices of G and is connected. This subgraph is still connected because when
+            two vertices are connected by a path containing the removed edge, they are connected by a path
+            not containing this edge. We can construct such a path by inserting into the original path, at
+            the point where the removed edge once was, the simple circuit with this edge removed. If this
+            subgraph is not a tree, it has a simple circuit; so as before, remove an edge that is in a simple
+            circuit. Repeat this process until no simple circuits remain. This is possible because there are
+            only a finite number of edges in the graph. The process terminates when no simple circuits
+            remain. A tree is produced because the graph stays connected as edges are removed. This tree
+            is a spanning tree because it contains every vertex of G.
+        </p>
         <br /><br /><br />
         <div class="parent">
             <img class="child" id="spanagain" src="images/spanagain.png">
-            <p class="child" id="fig">Fig 01: 
+            <p class="child" id="fig">Fig: A graph and all its <br /> possible spanning trees
             </p>
         </div>
+        <br /><br /><br />
+        <p class="text">
+            <b><span style="color: #E89611; font-size: 25px;">
+                    <h>Building a Spanning Tree:</h>
+                </span></b>
+            <br /><br /><br />
+            <span style="color:#E89611">
+                Depth First Search (DFS):
+            </span>
+            We can build a spanning tree for a connected simple graph using depth-first search. We arbitrarily choose a
+            vertex of the graph as the root. Now we can form a path starting at this vertex by
+            successively adding vertices and edges, where each new edge is incident with the last vertex in
+            the path and a vertex not already in the path. We can continue adding vertices and edges to this path as
+            long as possible. If the path goes through all vertices of the graph, the tree consisting of this path
+            is a spanning tree. However, if the path does not go through all vertices, more vertices and edges
+            must be added. <br /><br />
+        </p>
+        <div class="parent">
+            <img class="child" id="dfs" src="images/dfs.png">
+            <p class="child" id="fig">Fig: starting at f, would produce<br /> the following spanning tree:<br />
+                f &#x2192; g &#x2192; c &#x2192; a &#x2192; b &#x2192; d &#x2192; e <br /> we can have many different
+                spanning trees<br /> depending on the choices we make
+            </p>
+        </div> <br /><br /> <br />
+        <p class="text">
+            This is the point where we move back to the next to last vertex in the path, and, if possible, form a new
+            path
+            starting at this vertex passing through vertices that were not already visited. If this cannot be
+            done, we have to move back another vertex in the path, that is, two vertices back in the path, and try
+            again.
+            If we repeat this procedure, beginning at the last vertex visited, moving back up the path one
+            vertex at a time, forming new paths that are as long as possible until no more edges can be
+            added. Because the graph has a finite number of edges and is connected, this process ends with
+            the production of a spanning tree. This process is also known as <span style="color:#E89611">
+                backtracking</span>.
+        </p> <br /><br /> <br />
+        <p class="text">
+            <span style="color:#E89611">
+                Breadth First Search (BFS):
+            </span>
+            We will now build a spanning tree for a connected simple graph using breadth-first search. A rooted tree
+            will be constructed again, and the underlying undirected graph of this rooted tree forms the spanning tree.
+            We can arbitrarily choose a root from the vertices of the graph. Then adding all edges incident to this
+            vertex, the new vertices added at this stage become the vertices at level 1 in the spanning tree.
+            We can arbitrarily order them.
+        </p><br /><br />
+        <div class="parent">
+            <img class="child" id="bfs1" src="images/bfs1.png">
+            <img class="child" id="bfs2" src="images/bfs2.png">
+            <p class="child" id="figbfs">Fig: BFS spanning tree
+            </p>
+        </div> <br /><br /> <br />
+        <p class="text">
+            Next, for each vertex at level 1, visited in order, we add each edge incident to
+            this vertex to the tree as long as it does not produce a simple circuit.
+            We have arbitrarily ordered the children of each vertex at level 1. This produces the vertices at level 2
+            in the tree. We follow the same procedure until all the vertices in the tree have been added. The
+            procedure ends because there are only a finite number of edges in the graph. A spanning tree is
+            produced because we have produced a tree containing every vertex of the graph.
+            <br /><br />
+        </p><br /><br /><br />
+        <p class="text">
+            <b><span style="color: #E89611; font-size: 25px;">
+                    <h>Minimum Spanning Tree:</h>
+                </span></b>
+            <br /><br /><br />
+            A minimum spanning tree in a connected weighted graph is a spanning tree that has the smallest possible sum
+            of weights of its edges. There can be many spanning trees. Minimum spanning tree is the spanning tree where
+            the cost is minimum among all the spanning trees. There also can be many minimum spanning trees.
+        </p>
+        <div class="parent">
+            <img class="child" id="mst" src="images/mst.png">
+            <p class="child" id="figbfs">Fig: A planar graph and its minimum spanning tree.<br /> Each edge is labeled
+                with
+                its weight.
+            </p><br /><br />
+        </div> <br />
+        <p class="text">
+            <span style="color:#E89611">
+                Kruskal's Algorithm:
+            </span>
+            To find a minimum spanning tree in a connected weighted graph with n > 1 vertices,
+            <br /><br />
+            <b>Step 1</b>: Find an edge of least weight and call this e<sub>1</sub>. Set k = 1.
+            <br /><br />
+            <b>Step 2</b>: While k
+            < n <br /> <br />if there exists an edge e such that
+            {e} U {e<sub>1</sub>, e<sub>2</sub> , ...,
+            e<sub>k</sub>} does not contain a circuit,<br />let e<sub>k+1</sub> be such an edge of least weight and
+            replace k by k + 1;<br /> else output e<sub>1</sub>, e<sub>2</sub>,.., e<sub>k</sub> and stop.<br />
+            end while
+        </p>
+        <br /> <br />
+        <p class="text">
+            <span style="color:#E89611">
+                Prim's Algorithm:
+            </span>
+            To find a minimum spanning tree in a connected weighted graph with n > 1 vertices,
+            <br /><br />
+            <b>Step 1</b>: Choose any vertex v and let e<sub>1</sub> be an edge of least weight incident with
+            v. Set k = 1.
+            <br /><br />
+            <b>Step 2</b>: While k
+            < n <br /> <br /> if there exists a vertex which is not in the subgraph T whose edges are
+            e<sub>1</sub>, e<sub>2</sub> , ..., e<sub>k</sub><br/>
+            let e<sub>k+1</sub> be an edge of least weight among all edges of the form
+            ux, where u is a vertex of T and x is a vertex not in T;<br />
+            replace k by k + 1;<br /> else output e<sub>1</sub>, e<sub>2</sub>,.., e<sub>k</sub> and stop.<br />
+            end while
+        </p><br /> <br /><br /> <br />
     </div>
 </body>
 

@@ -101,3 +101,46 @@ header {
     border-radius: 5%;
     margin-left: 100px;
 }
+
+#onespan {
+    margin-left: 63px;
+    border-radius: 10%;
+    margin-right: 20px;
+}
+
+#twospan {
+    border-radius: 10%;
+    height: 342px;
+}
+
+#threespan {
+    border-radius: 10%;
+    margin-right: 20px;
+}
+
+#dfs {
+    border-radius: 20%;
+    height: 320px;
+}
+
+#bfs1 {
+    border-radius: 20%;
+}
+
+#bfs2 {
+    margin-left: 40px;
+    border-radius: 10%;
+    height: 350px;
+}
+
+#mst {
+    border-radius: 10%;
+    height: 400px;
+}
+
+#figbfs {
+    margin-left: 40px;
+    font-family: Roboto Mono;
+    color: white;
+    font-size: 20px;
+}
