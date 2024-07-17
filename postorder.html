@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,9 +10,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
 </head>
+
 <body>
     <header>
         <!--Image-->
@@ -29,6 +33,19 @@
         </nav>
     </header>
     <h2 id="head"> Post Order Traversal </h2>
+    <br /><br />
+    <p class="text">
+        Let T be an ordered rooted tree with root r. If T consists only of r, then r is the postorder
+        traversal of T. Otherwise, suppose that T<sub>1</sub>,T<sub>2</sub>,…,T<sub>n</sub> are the subtrees at r from
+        left to right in T. The postorder traversal begins by traversing T<sub>1</sub> in
+        postorder, then T<sub>2</sub> in postorder, ..., then T<sub>n</sub> in postorder and ends by visiting r.
+    </p> <br />
+    <div class="parent">
+        <img class="child" id="inorder" src="inorder.png">
+        <p class="child" id="fig">Fig: left child &#8594; right child &#8594; root <br /> <br />
+            4 &#8594; 8 &#8594; 5 &#8594; 2 &#8594; 6 &#8594; 9 &#8594; 10 &#8594; 7 &#8594; 3 &#8594; 1
+        </p><br /><br /><br />
+    </div> <br />
     <div class="button">
         <span id="para"> Now try to make a tree and see for yourself.</span>
         <button id="run-js">Start</button>
@@ -39,14 +56,14 @@
             <textarea id="js-code"></textarea>
         </div>
         <div class="right">
-            <div class="container">     
+            <div class="container">
                 <div class="tree"></div>
             </div>
         </div>
     </div>
     <div class="output">
         <label><i class="fa-solid fa-play" style="color: #74C0FC;"></i>Post Order Traversal</label>
-        <textarea id="outputbox"></textarea> 
+        <textarea id="outputbox"></textarea>
     </div>
     <div class="box">
         <label><i class="fa-solid fa-book" style="color: #63E6BE;"></i>Log Box</label>
@@ -55,4 +72,5 @@
     <script defer type="module" src="postorder.js"></script>
     <!--<script defer type="module" src="inorder.js"></script>-->
 </body>
+
 </html>
