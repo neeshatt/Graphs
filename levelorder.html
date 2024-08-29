@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Postorder Traversal</title>
-    <link rel="stylesheet" href="postorder.css">
+    <title>Levelorder Traversal</title>
+    <link rel="stylesheet" href="levelorder.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
@@ -32,7 +32,7 @@
             </ul>
         </nav>
     </header>
-    <h2 id="head"> Post Order Traversal </h2>
+    <h2 id="head"> Level Order Traversal </h2>
     <br /><br />
     <p class="text">
         Let T be an ordered rooted tree with root r. If T consists only of r, then r is the postorder
@@ -61,15 +61,18 @@
             </div>
         </div>
     </div>
-    <div class="output">
-        <label><i class="fa-solid fa-play" style="color: #74C0FC;"></i>Post Order Travel Route</label>
-        <textarea id="outputbox"></textarea>
+    <div class="flex-container">
+        <div class="output">
+            <label><i class="fa-solid fa-play" style="color: #74C0FC;"></i>Level Order Travel Route</label>
+            <textarea id="outputbox"></textarea>
+        </div>
+        <div class="box">
+            <label><i class="fa-solid fa-book" style="color: #63E6BE;"></i>Log Box</label>
+            <iframe id="log"></iframe>
+        </div>
     </div>
-    <div class="box">
-        <label><i class="fa-solid fa-book" style="color: #63E6BE;"></i>Log Box</label>
-        <iframe id="log"></iframe>
-    </div>
-    <script defer type="module" src="postorder.js"></script>
+    
+    <script defer type="module" src="levelorder.js"></script>
     <!--<script defer type="module" src="inorder.js"></script>-->
 </body>
 
