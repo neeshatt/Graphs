@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,9 +8,11 @@
     <link rel="stylesheet" href="BFS.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
+
 <body>
     <header>
         <div>
@@ -27,6 +30,28 @@
     </header>
     <main>
         <h2 id="head">BFS Traversal</h2>
+
+        <br /><br /><br />
+        <p class="text">
+            Breadth-first search (BFS) is an algorithm for searching a tree data structure for a node that satisfies a
+            given property. It starts at the tree root and explores all nodes at the present depth prior to moving on to
+            the nodes at the next depth level. The algorithm systematically explores a graph by visiting all the
+            vertices at a given level before moving on to the next level. It starts from a starting vertex, enqueues it
+            into a queue, and marks it as visited. Then, it dequeues a vertex from the queue, visits it, and enqueues
+            all its unvisited neighbors into the queue. This process continues until the queue is empty.
+        </p>
+        <br /><br /><br />
+        <div class="parent">
+            <img class="child" id="dfss" src="images/dfss.png">
+            <p class="child" id="fig">Fig : one example of BFS traversal <br />on this graph could be:<br />
+                1&rarr;2&rarr;7&rarr;8&rarr;3&rarr;6&rarr;9&rarr;12&rarr;4&rarr;5&rarr;10&rarr;11
+                <br />while another could be:<br />
+                11&rarr;9&rarr;10&rarr;8&rarr;12&rarr;1&rarr;7&rarr;2&rarr;3&rarr;6&rarr;4&rarr;5.
+                <br />There can be many different results <br />for the same graph in different <br />
+                programs and they are all correct if <br />BFS procedures are carefully followed.
+            </p>
+        </div>
+        <br /><br /><br />
 
         <div class="button">
             <span id="para"> Create your own graph and see BFS for yourself.</span>
@@ -63,7 +88,7 @@
                 <button id="bfs-btn">Start BFS</button>
             </div>
             <div id="bfs-result">
-                
+
                 <textarea id="bfs-output" rows="5" readonly></textarea>
             </div>
         </div>
@@ -71,4 +96,5 @@
 
     <script src="BFS.js"></script>
 </body>
+
 </html>

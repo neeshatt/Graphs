@@ -17,7 +17,8 @@
     height: 100px;
 }
 
-li, a {
+li,
+a {
     color: white;
     font-size: 16px;
     font-weight: 500;
@@ -136,11 +137,12 @@ header {
     display: flex;
 }
 
-#start-btn, #dfs-btn {
+#start-btn,
+#dfs-btn {
     background-color: #0BDA51;
     padding-left: 10px;
     padding-right: 10px;
-    color:#000;
+    color: #000;
     border: none;
     border-radius: 5px;
     font-size: 16px;
@@ -149,7 +151,8 @@ header {
     font-weight: 700;
 }
 
-#start-btn:hover, #dfs-btn:hover {
+#start-btn:hover,
+#dfs-btn:hover {
     background-color: #09c046;
     box-shadow: 0 0 30px rgba(13, 255, 94, 0.5);
 }
@@ -171,7 +174,8 @@ header {
     color: #0BDA51;
 }
 
-#log, #adjacency-matrix {
+#log,
+#adjacency-matrix {
     width: 100%;
     height: 500px;
     background: white;
@@ -189,7 +193,8 @@ header {
     outline: 0;
     margin: 0;
     overflow-y: auto;
-    overflow-x: auto; /* Add horizontal scrolling if needed */
+    overflow-x: auto;
+    /* Add horizontal scrolling if needed */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -200,12 +205,14 @@ header {
 
 #adjacency-matrix table {
     border-collapse: collapse;
-    width: auto; /* Allow table to be wider than container */
+    width: auto;
+    /* Allow table to be wider than container */
 }
 
 #adjacency-matrix th,
 #adjacency-matrix td {
-    padding: 10px 15px; /* Increase horizontal padding */
+    padding: 10px 15px;
+    /* Increase horizontal padding */
     border: 1px solid white;
     text-align: center;
 }
@@ -300,4 +307,43 @@ label {
 
 #dfs-result {
     margin-top: 10px;
+}
+
+.define {
+    padding-left: 121px;
+    font-family: Roboto Mono;
+    color: #E89611;
+    font-size: 35px;
+    padding-top: 125px;
+    display: inline-block;
+}
+
+.text {
+    font-family: Roboto Mono;
+    color: white;
+    font-size: 20px;
+    display: inline-block;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.parent {
+    padding-left: 160px;
+    padding-top: 30px;
+}
+
+.child {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#fig {
+    font-family: Roboto Mono;
+    color: white;
+    font-size: 20px;
+    padding-left: 135px;
+}
+
+#dfss {
+    height: 350px;
 }
