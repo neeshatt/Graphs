@@ -1,47 +1,77 @@
 const getTreeData = () => {
   return {
       text: 'Point Zero',
-      link: "problemset.html",
+      link: "pointzero.html",
     left: {
-      text: 'test12',
+      text: 'Walk The Walk',
+      link: "walkthewalk.html",
       left: {
-        text: 'test122',
+        text: 'Learn Your Graphs!',
+        link: "Graphs.html",
+        left: {
+          text: 'Graph Coloring',
+          link: "coloring.html",
+          left: {
+            text: 'You Do It!',
+            link: "graph_coloring.html",
+          },
+        },
       },
       right: {
-        text: 'test123',
+        text: 'Know Your Neighbours',
+        link: "adjacency.html",
+        left: {
+          text: 'LionHeart Euler',
+          link: "euler.html",
+          left: {
+            text: 'Breadth First!',
+            link: "BFS.html",
+          },
+          right: {
+            text: 'Depth First!',
+            link: "DFS.html",
+          },
+        },
+        right: {
+          text: 'Hamilton',
+          link: "hamilton.html",
+        },
       },
     },
     right: {
-      text: 'test13',
+      text: 'Incidence And Degree',
+      link: "degree.html",
       left: {
-        text: 'test132',
+        text: 'Philosophia Botanica',
+        link: "trees.html",
         left: {
-          text: 'test1321',
+          text: 'Spend Less with Spanning Trees',
+          link: "spantree.html",
           left: {
-            text: 'test13211',
+            text: 'Pre Order Traversal',
+            link: "preorder.html",
+          },
+          right: {
+            text: 'PostOrder Traversal',
+            link: "postorder.html",
+          },
+        },
+        right: {
+          text: 'Double Trouble',
+          link: "binary.html",
+          left: {
+            text: 'In Order Traversal',
+            link: "inorder.html",
+          },
+          right: {
+            text: 'LevelOrder Traversal',
+            link: "levelorder.html",
           },
         },
       },
       right: {
-        text: 'test133',
-        left: {
-          text: 'test1332',
-        },
-        right: {
-          text: 'test1333',
-          left: {
-            text: 'test1321',
-            left: {
-              text: 'test13211',
-            },
-          },
-          right: {
-            text: 'test1321',
-            right: {
-              text: 'test13211',
-            },
-          },
-        },
+        text: 'Tree-mendous Theorems',
+        link: "theorems.html",
       },
     },
   };

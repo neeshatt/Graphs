@@ -82,43 +82,12 @@ header{
   transform: scale(1.3);
 }
 
-/*#content{
-  text-align: center;
-  white-space: nowrap;
-  overflow: hidden;
-  width: 64ch;
-  animation: typewriter 3s steps(16) 1s; 
-}*/
-
-/*@keyframes typewriter {
-  0%{width: 0;}
-  100%{width: 16ch;}
-}*/
-
-/*@keyframes fade-up{
-    0% {
-        opacity: 0;
-        transform: translateY(100px) scale(0.6);
-    }
-
-    100% {
-        opacity: 1;
-        transform: translateY(0px) scale(1); 
-    }
-}*/
-
 .intro{
     font-size: 20px;
     padding-top: 20px;
     padding-left: 100px;
     padding-right: 100px;
     text-align: justify;
-    /*animation-name: fade-up;
-    animation-duration: 0.75s;
-    animation-timing-function: ease-in;
-    animation-delay: 0s;
-    animation-iteration-count: 1;
-    animation-direction: normal;*/
 }
 
 .container{
@@ -169,14 +138,15 @@ header{
 .node__element {
   cursor: pointer;
   border: 1px solid transparent;
-  height: 40px;
+  height: 60px;
   background-color: cyan;
   color:#012169;
   border-radius: 16px;
   min-width: 60px;
   max-width: max-content;
-  font-size: 20px;
-  padding: 4px 8px;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 4px 8px; 
   line-height: 32px;
   text-align: center;
 }
@@ -184,7 +154,7 @@ header{
 .node__link{
   background-color: cyan;
   color: #012169;
-  font-size: 20px;
+  font-size: 16px;
 }
 
 .node__bottom-line {
