@@ -1,0 +1,130 @@
+#h {
+    color: #0BDA51;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding-left: 12px;
+    font-weight: 200;
+    font-size: 50px;
+    display: inline-block;
+}
+
+#logo {
+    height: 100px;
+}
+
+li,
+a {
+    font-family: Roboto Mono;
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 30px;
+}
+
+.nav_links {
+    list-style: none;
+}
+
+.nav_links li {
+    float: left;
+    display: inline;
+    padding: 20px;
+}
+
+.nav_links li a {
+    display: inline-block;
+    padding: 10px;
+    transition: all 0.3s ease 0s;
+}
+
+.nav_links li a:hover:not(.active) {
+    background-color: black;
+    color: white;
+    border: 5px, solid #0BDA51;
+    font-size: 20px;
+    border-radius: 25px;
+}
+
+.nav_links li a.active {
+    background-color: black;
+    color: white;
+    border: 5px, solid cyan;
+    border-radius: 25px;
+}
+
+.define {
+    padding-left: 121px;
+    font-family: Roboto Mono;
+    color: #E89611;
+    font-size: 35px;
+    padding-top: 125px;
+    display: inline-block;
+}
+
+.text {
+    font-family: Roboto Mono;
+    color: white;
+    font-size: 20px;
+    display: inline-block;
+    padding-left: 125px;
+    padding-right: 125px;
+}
+
+.parent {
+    padding-left: 160px;
+    padding-top: 50px;
+}
+
+.child {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#fig {
+    font-family: Roboto Mono;
+    color: white;
+    font-size: 20px;
+    padding-left: 135px;
+}
+
+#k {
+    height: 250px;
+}
+
+#c {
+    height: 250px;
+    padding-left: 200px;
+}
+
+#w {
+    height: 500px;
+    padding-left: 50px;
+}
+
+#fig2 {
+    font-family: Roboto Mono;
+    color: white;
+    font-size: 20px;
+    padding-left: 80px;
+}
+
+#bipart {
+    height: 250px;
+    padding-left: 200px;
+}
+
+#planar {
+    margin-left: 170px;
+    height: 270px;
+}
+
+#nonplanar {
+    margin-left: 40px;
+    height: 230px;
+}

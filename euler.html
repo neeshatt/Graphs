@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="euler.css">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+    <title>LionHeart Euler</title>
+</head>
+
+<body bgcolor="#012169">
+    <header>
+        <!--Image-->
+        <div>
+            <h2 id="h" align="left">DotConnect</h2>
+            <img id="logo" src="images/line-chart.png">
+        </div>
+        <nav>
+            <ul class="nav_links">
+                <li><a href="homepage.html"> Home </a></li>
+                <li><a href="problemset.html"> Problemset </a></li>
+                <li><a href="IDE.html"> IDE </a></li>
+                <li><a href="AboutUs.html"> About us </a></li>
+            </ul>
+        </nav>
+    </header>
+    <div>
+        <h class="define">LionHeart Euler: Euler Paths & Euler Circuit</h>
+        <br /><br /><br /><br />
+        <p class="text">
+            The town of Konigsberg, Prussia was divided into four sections by the branches of the Pregel River.
+            <br />These four sections included the two regions on the banks of the Pregel, Kneiphof Island,
+            and the region between the two branches of the Pregel.
+            In the eighteenth century seven bridges connected these regions.
+            The townspeople took long walks through town on Sundays. They wondered whether it was
+            possible to start at some location in the town, travel across all the bridges
+            once without crossing any bridge twice, and return to the starting point.
+            The Swiss mathematician <span style="color:#E89611">Leonhard Euler </span>solved
+            this problem. His solution, published in 1736, may be the first use of graph theory.
+        </p>
+        <br /><br /><br />
+        <div class="parent">
+            <img class="child" id="konigs" src="images/koniggs.png">
+            <img class="child" id="konigs2" src="images/koniggs2.png">
+            <p class="child" id="fig">Fig : the seven bridges <br />of Konigsberg
+            </p>
+        </div>
+        <br /><br /><br /><br />
+        <p class="text">
+            Euler proved that the problem has no solution.
+            Euler first pointed out that the choice of route inside each land mass is irrelevant
+            and that the only important feature of a route is the sequence of bridges crossed.
+            This allowed him to reformulate the problem in abstract terms (laying the foundations of
+            graph theory), eliminating all features except the list of land masses and the
+            bridges connecting them. In modern terms, one replaces each land mass with an abstract
+            "vertex" or node, and each bridge with an abstract connection, an "edge",
+            which only serves to record which pair of vertices (land masses) is
+            connected by that bridge. The resulting mathematical structure is a graph.
+            <br /><br />
+            Since only the connection information is relevant, the shape of pictorial representations of a graph may be
+            distorted in any way, without changing the graph itself. Only the number of edges (possibly zero) between
+            each pair of nodes is significant. It does not, for instance, matter whether the edges drawn are straight or
+            curved, or whether one node is to the left or right of another.
+            <br /><br />
+            Next, Euler observed that (except at the endpoints of the walk), whenever one enters a vertex by a bridge,
+            one leaves the vertex by a bridge. In other words, during any walk in the graph, the number of times one
+            enters a non-terminal vertex equals the number of times one leaves it. Now, if every bridge has been
+            traversed exactly once, it follows that, for each land mass (except for the ones chosen for the start and
+            finish), the number of bridges touching that land mass must be even (half of them, in the particular
+            traversal, will be traversed "toward" the landmass; the other half, "away" from it). However, all four of
+            the land masses in the original problem are touched by an odd number of bridges (one is touched by 5
+            bridges, and each of the other three is touched by 3). Since, at most, two land masses can serve as the
+            endpoints of a walk, the proposition of a walk traversing each bridge once leads to a contradiction.
+        </p>
+        <br /><br /><br /><br />
+        <p class="text">
+            <b><span style="color: #E89611; font-size: 25px;">
+                    <h>Euler Path:</h>
+                </span></b>
+            An Euler path in G is a simple path containing every edge of G.
+            A necessary condition for the path of this desired form is that the graph
+            be connected and have exactly zero or two nodes of odd degree.
+        </p>
+        <br /><br /><br /><br />
+        <p class="text">
+            <b><span style="color: #E89611; font-size: 25px;">
+                    <h>Euler Circuit:</h>
+                </span></b>
+            An Euler circuit in a graph G is a simple circuit containing every edge of G,
+            a path that traverses all edges and also has the same starting and ending point.
+        </p>
+        <div class="parent">
+            <img class="child" id="konigs" src="images/euler1.png">
+            <p class="child" id="fig">Fig : G<sub>1</sub> has an Euler Circuit: <br />
+                (a, e, c, d, e, b, a)<br />
+                G<sub>3</sub> has an Euler Path:<br /> (a, c, d, e, b, d, a, b)<br />
+                G<sub>2</sub> has neither.
+            </p>
+        </div>
+        <br/><br/><br/>
+        <p class="text">
+            A connected multigraph with at least two vertices has an Euler circuit 
+            if and only if each of its vertices has even degree. A connected multigraph 
+            has an Euler path but not an Euler circuit if and only if it has exactly
+            two vertices of odd degree.
+        </p>
+        <div class="parent">
+            <img class="child" id="konigs" src="images/euler2.png">
+            <p class="child" id="fig">Fig : H<sub>2</sub> has an Euler Circuit: <br />
+                (a, g, c, b, g, e, d, f, a)<br />
+                H<sub>3</sub> has an Euler Path:<br /> (c, a, b, c, d, b)<br />
+                H<sub>2</sub> has neither.
+            </p>
+        </div>
+        <br/><br/><br/>
+    </div>
+</body>
+
+</html>

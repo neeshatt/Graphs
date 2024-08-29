@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="Graphs.css">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+    <title>Learn the Graphs</title>
+</head>
+
+<body bgcolor="#012169">
+    <header>
+        <!--Image-->
+        <div>
+            <h2 id="h" align="left">DotConnect</h2>
+            <img id="logo" src="images/line-chart.png">
+        </div>
+        <nav>
+            <ul class="nav_links">
+                <li><a href="homepage.html"> Home </a></li>
+                <li><a href="problemset.html"> Problemset </a></li>
+                <li><a href="IDE.html"> IDE </a></li>
+                <li><a href="AboutUs.html"> About us </a></li>
+            </ul>
+        </nav>
+    </header>
+    <div>
+        <h class="define">Learn The Graphs!</h>
+        <br /><br /><br /><br />
+        <p class="text">
+            <b><span style="color: #E89611; font-size: 25px;">
+                    <h>Complete Graphs:</h>
+                </span></b>
+            A complete graph on n vertices, denoted by K<sub>n</sub>, is a simple graph
+            that contains exactly one edge between each pair of distinct vertices.
+            A simple graph for which there is at least one pair
+            of distinct vertex not connected by an edge is called noncomplete.
+        </p>
+        <div class="parent">
+            <img class="child" id="k" src="images/k1.png">
+            <img class="child" id="k" src="images/k2.png">
+            <img class="child" id="k" src="images/k3.png">
+            <img class="child" id="k" src="images/k4.png"> <br />
+            <img class="child" id="k" src="images/k5.png">
+            <img class="child" id="k" src="images/k6.png">
+            <img class="child" id="k" src="images/k7.png">
+            <p class="child" id="fig">Fig : the graphs K<sub>n</sub> for <br />1 <= n <=7 </p>
+        </div>
+        <br /><br /><br />
+        <p class="text">
+            <b><span style="color: #E89611; font-size: 25px;">
+                    <h>Cycles:</h>
+                </span></b>
+            A cycle C<sub>n</sub> consists of n vertices v<sub>1</sub>,
+            v<sub>2</sub>, ..., v<sub>n</sub> and n edges {v<sub>1</sub>, v<sub>2</sub>},
+            {v<sub>2</sub>, v<sub>3</sub>}, ..., <br />{v<sub>n-1</sub>, v<sub>n</sub>},
+            {v<sub>n</sub>, v<sub>1</sub>}.
+        </p>
+        <div class="parent">
+            <img class="child" id="c" src="images/c5.png">
+            <p class="child" id="fig">Fig : a cycle C<sub>5</sub>
+            </p>
+        </div>
+        <br /><br /><br />
+        <p class="text">
+            <b><span style="color: #E89611; font-size: 25px;">
+                    <h>Wheels:</h>
+                </span></b>
+            When an additional vertex is added to C<sub>n</sub> for n >= 3 and this new
+            vertex is connected to each of then vertices by new edges, a wheel W<sub>n</sub>
+            is obtained.
+        </p>
+        <div class="parent">
+            <img class="child" id="w" src="images/wheels.png">
+            <p class="child" id="fig2">Fig : wheels W<sub>n</sub><br /> for 4 <= n <=9 </p>
+        </div>
+        <br /><br /><br />
+        <p class="text">
+            <b><span style="color: #E89611; font-size: 25px;">
+                    <h>Bipartite Graphs:</h>
+                </span></b>
+            A simple graph G is called bipartite if its vertex set V can be partitioned into two
+            disjoint sets V<sub>1</sub> and V<sub>2</sub> such that every edge in the graph
+            connects a vertex in V<sub>1</sub> and a vertex in V<sub>2</sub> (so that no
+            edge in G connects either two vertices in V<sub>1</sub>
+            or two vertices in V<sub>2</sub>). When this condition holds, we call the
+            pair (V<sub>1</sub>, V<sub>2</sub>) a bipartition of the vertex set V of G.
+        </p>
+        <div class="parent">
+            <img class="child" id="bipart" src="images/bipart.png">
+            <p class="child" id="fig2">Fig : bipartite graph<br /> without cycles </p>
+        </div>
+        <br /><br /><br />
+        <p class="text">
+            <b><span style="color: #E89611; font-size: 25px;">
+                    <h>Complete Bipartite Graphs:</h>
+                </span></b>
+            A complete bipartite graph K<sub>m,n</sub> is a graph that has its vertex
+            set partitioned into two subsets of m and n vertices, respectively with an edge
+            between two vertices if and only if one vertex is in the first subset and
+            the other vertex is in the second subset.
+        </p>
+        <div class="parent">
+            <img class="child" id="bipart" src="images/kmn.png">
+            <p class="child" id="fig2">Fig : complete bipartite graph<br />K<sub>m,n</sub>
+                with m = 5, n = 3 </p>
+        </div>
+        <br /><br /><br />
+        <p class="text">
+            <b><span style="color: #E89611; font-size: 25px;">
+                    <h>Planar Graphs:</h>
+                </span></b>
+            A graph is called planar if it can be drawn in the plane without any edges
+            crossing (where a crossing of edges is the intersection of the lines or arcs
+            representing them at a point other than their common endpoint).
+            Such a drawing is called a planar representation of the graph.
+        </p>
+        <div class="parent">
+            <img class="child" id="planar" src="images/planar.png">
+            <img class="child" id="nonplanar" src="images/nonplanar.png">
+            <p class="child" id="fig">Fig : a planar and <br />a non-planar graph</p>
+        </div>
+        <br /><br /><br />
+        <p class="text">
+            <b><span style="color: #E89611; font-size: 25px;">
+                    <h>Euler's Formula:</h>
+                </span></b>
+            Let G be a connected planar simple graph with e edges and v
+            vertices. Let r be the number of regions in a planar
+            representation of G. Then r = e − v + 2. <br /><br /><br />
+            <span style="color: #E89611">Proof: </span> by induction on the number of edges in the graph.
+            <br /><span style="color: #E89611">Base: </span>If e = 0, the graph consists of a
+            single node with a single face surrounding it. So we have 1 − 0 + 1 = 2 which is clearly
+            right.<br />
+            <span style="color: #E89611">Induction: </span> Suppose the formula works for all
+            graphs with no more than n edges. Let G be a graph with <br />n + 1 edges.<br /><br />
+            Case 1: G doesn’t contain a cycle. So G is a free tree and we
+            already know the formula works for free trees.<br />
+            Case 2: G contains at least one cycle. Pick an edge p that’s on a
+            cycle. Remove p to create a new graph G′. Since the cycle separates the plane into
+            two faces, the faces to either side of p must be distinct. When we remove the edge p,
+            we merge these two faces. So G′ has one fewer faces than G.
+            Since G′ has n edges, the formula works for G′ by the induction
+            hypothesis.<br/> That is v' - e' + f = 2. <br/>But v' = v, e' = e - 1 and f' = f - 1.<br/>
+            Substituting, we find that v − (e − 1) + (f − 1) = 2 <br/> So, v − e + f = 2.
+        </p>
+    </div>
+</body>
+
+</html>

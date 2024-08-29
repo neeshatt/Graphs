@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="coloring.css">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+    <title>Graph Coloring</title>
+</head>
+
+<body bgcolor="#012169">
+    <header>
+        <!--Image-->
+        <div>
+            <h2 id="h" align="left">DotConnect</h2>
+            <img id="logo" src="images/line-chart.png">
+        </div>
+        <nav>
+            <ul class="nav_links">
+                <li><a href="homepage.html"> Home </a></li>
+                <li><a href="problemset.html"> Problemset </a></li>
+                <li><a href="IDE.html"> IDE </a></li>
+                <li><a href="AboutUs.html"> About us </a></li>
+            </ul>
+        </nav>
+    </header>
+    <div>
+        <h class="define">Graph Coloring</h>
+        <br /><br /><br /><br />
+        <p class="text">
+            The <span style="color: #E89611;">coloring problem</span> is of determining
+            the least number of colors that can be used to color a map so that adjacent
+            regions never have the same color. So, a coloring of a simple graph is the assignment
+            of a color to each vertex of the graph so that no two adjacent vertices are
+            assigned the same color.
+        </p>
+        <br /><br /><br />
+        <div class="parent">
+            <img class="child" id="coloring" src="images/coloring.png">
+            <p class="child" id="fig">Fig : a graph 3-colored in 12 <br />different ways
+            </p>
+        </div>
+        <br /><br /><br />
+        <p class="text">
+            <b><span style="color: #E89611; font-size: 25px;">
+                    <h>Chromatic Number:</h>
+                </span></b>
+            The chromatic number of a graph is the least number of colors needed for a coloring of
+            this graph. The chromatic number of a graph G is denoted by &#x3C7;(G).
+        </p>
+        <br /><br /><br />
+        <p class="text">
+            <b><span style="color: #E89611; font-size: 25px;">
+                    <h>The Four Color Theorem:</h>
+                </span></b>
+            The chromatic number of a planar graph is no greater than four. <br />
+            So, &#x3C7;(G = planar graph) <= 4. </p>
+                <br /><br /><br />
+                <p class="text">
+                    <b><span style="color: #E89611; font-size: 25px;">
+                            <h>Coloring of K<sub>n</sub>:</h>
+                        </span></b>
+                    The chromatic number of a complete graph K<sub>n</sub> (where n is a positive
+                    integer) is n, because each vertex connected to all other vertices, we need at least
+                    n colors so that no pair of adjacent vertices is the same color.
+                </p>
+                <br /><br /><br />
+                <p class="text">
+                    <b><span style="color: #E89611; font-size: 25px;">
+                            <h>Coloring of K<sub>m,n</sub>:</h>
+                        </span></b>
+                    The chromatic number of a complete bipartite graph K<sub>m,n</sub> (where m & n are positive
+                    integers) is 2, because we can color the set of m vertices with one color and the
+                    set of n vertices with a second color. Because edges connect only a vertex
+                    from the set of m vertices and a vertex from the set of n vertices,
+                    no two adjacent vertices have the same color.
+                </p>
+                <div class="parent">
+                    <img class="child" id="kmncolored" src="images/kmncolored.png">
+                    <p class="child" id="fig">Fig : colored K<sub>5,5</sub>
+                    </p>
+                </div>
+                <br /><br /><br />
+                <p class="text">
+                    <b><span style="color: #E89611; font-size: 25px;">
+                            <h>Coloring of C<sub>n</sub>:</h>
+                        </span></b>
+                    The chromatic number of a cycle C<sub>n</sub> (where n is a positive
+                    integer) depends on n. In general, two colors are needed to color C<sub>n</sub> 
+                    when n is even. When n is odd and n > 1, the chromatic number of C<sub>n</sub> 
+                    is 3.
+                </p>
+                <div class="parent">
+                    <img class="child" id="kmncolored" src="images/cncolored.png">
+                    <p class="child" id="fig">Fig : colored C<sub>6</sub> & C<sub>5</sub>
+                    </p>
+                </div>
+    <br/><br/><br/>
+    </div>
+</body>
+
+</html>

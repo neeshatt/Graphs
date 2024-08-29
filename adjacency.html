@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="adjacency.css">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+    <title>Graph Representation</title>
+</head>
+
+<body bgcolor="#012169">
+    <header>
+        <!--Image-->
+        <div>
+            <h2 id="h" align="left">DotConnect</h2>
+            <img id="logo" src="images/line-chart.png">
+        </div>
+        <nav>
+            <ul class="nav_links">
+                <li><a href="homepage.html"> Home </a></li>
+                <li><a href="problemset.html"> Problemset </a></li>
+                <li><a href="IDE.html"> IDE </a></li>
+                <li><a href="AboutUs.html"> About us </a></li>
+            </ul>
+        </nav>
+    </header>
+    <div>
+        <h class="define">Graph Representation</h>
+        <br /><br /><br /><br />
+        <p class="text">
+            <b><span style="color: #E89611; font-size: 25px;">
+                    <h>Adjacency List:</h>
+                </span></b>
+            Adjacency lists can be used to represent graphs without multiple edges. The lists specify the
+            vertices that are adjacent to each vertex of the graph.
+        </p>
+        <br /><br /><br />
+        <div class="parent">
+            <img class="child" id="adjlist" src="images/adjlist.png">
+            <img class="child" id="adjlist2" src="images/adjlist2.png">
+            <p class="child" id="fig">Fig : A simple graph <br />and its adjacency list
+            </p>
+        </div>
+        <br /><br /><br /><br />
+        <p class="text">
+            Directed graphs can also have adjacency lists, where we specify the initial and terminal vertices. In a
+            <span style="color:#E89611">sparse </span> graph, adjacency lists are much more space-efficient. Adjacency
+            lists do not require a lot of space. However, if we want to identify any one specific edge connection, the
+            worst case scenario is we are checking all entries of that list.
+        </p>
+        <br /><br /><br />
+        <div class="parent">
+            <img class="child" id="adjlist" src="images/diadjlist.png">
+            <img class="child" id="adjlist2" src="images/diadjlist2.png">
+            <p class="child" id="fig2">Fig : A directed graph <br />and its adjacency list
+            </p>
+        </div>
+        <br /><br /><br /><br />
+        <p class="text">
+            <b><span style="color: #E89611; font-size: 25px;">
+                    <h>Adjacency Matrix:</h>
+                </span></b>
+            If G = (V,E) is a simple graph where |V| = n. The vertices of G listed arbitrarily as v<sub>1</sub>,
+            v<sub>2</sub>,
+            ..., v<sub>n</sub>.
+            The adjacency matrix A (or A<sub>G</sub>) of G, with respect to this
+            listing of the vertices, is the n x n zero–one matrix with 1 as its (i,j)<sup>th</sup> entry when
+            v<sub>i</sub>
+            and v<sub>j</sub> are adjacent, and 0 as its (i,j)<sup>th</sup> entry when they are not adjacent.
+        </p>
+        <br />
+        <p class="text">
+            So, if an adjacency matrix is A = [a<sub>ij</sub>] then,
+            a<sub>ij</sub> =
+            <span style="font-size: 60px; display: inline-block; vertical-align: middle;">{</span>
+            <span style="display: inline-block; vertical-align: middle;">
+                1 if {v<sub>i</sub>, v<sub>j</sub>} is an edge of G <br>
+                0 otherwise
+            </span>
+        </p>
+        <div class="parent">
+            <img class="child" id="adjmatrix" src="images/adjmatrix.png">
+            <img class="child" id="adjmat2" src="images/adjmat2.png">
+            <p class="child" id="fig2">Fig : An undirected graph <br />and its adjacency matrix
+            </p>
+        </div>
+        <br /><br />
+        <p class="text">
+            An adjacency matrix has n<sup>2</sup> entries. If a simple graph is 
+            <span style="color:#E89611">dense</span>, such
+            as a graph that contains more than half of all possible edges, using an adjacency
+            matrix to represent the graph is usually preferable over using adjacency lists.
+            Using an adjacency matrix, we can determine whether this edge is present by 
+            examining the (i, j)th entry in the matrix. This entry is 1 if the graph contains 
+            this edge and is 0 otherwise. We need make only one comparison, namely, comparing this entry with 0, 
+            to determine whether this edge is present.
+        </p>
+        <br /><br /><br /><br />
+        <p class="text">
+            <b><span style="color: #E89611; font-size: 25px;">
+                    <h>Incidence Matrix:</h>
+                </span></b>
+            Let G = (V,E) be an undirected graph. If v<sub>1</sub>,
+            v<sub>2</sub>,
+            ..., v<sub>n</sub> are the vertices and e<sub>1</sub>, e<sub>2</sub>,
+            ..., e<sub>m</sub> are the edges of G, then
+            the incidence matrix with respect to this ordering of V and E is the n X m matrix
+            M = [m<sub>ij</sub>] where,
+            m<sub>ij</sub> =
+            <span style="font-size: 60px; display: inline-block; vertical-align: middle;">{</span>
+            <span style="display: inline-block; vertical-align: middle;">
+                1 when edge e<sub>j</sub> is incident with v<sub>i</sub> <br>
+                0 otherwise
+            </span>
+        </p>
+        <div class="parent">
+            <img class="child" id="inci1" src="images/inci1.png">
+            <img class="child" id="inci2" src="images/inci2.png">
+            <p class="child" id="fig2">Fig : An undirected graph <br />and its incidence matrix
+            </p>
+        </div>
+        <br />
+    </div>
+</body>
+
+</html>

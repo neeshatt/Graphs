@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="hamilton.css">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+    <title>Hamilton</title>
+</head>
+
+<body bgcolor="#012169">
+    <header>
+        <!--Image-->
+        <div>
+            <h2 id="h" align="left">DotConnect</h2>
+            <img id="logo" src="images/line-chart.png">
+        </div>
+        <nav>
+            <ul class="nav_links">
+                <li><a href="homepage.html"> Home </a></li>
+                <li><a href="problemset.html"> Problemset </a></li>
+                <li><a href="IDE.html"> IDE </a></li>
+                <li><a href="AboutUs.html"> About us </a></li>
+            </ul>
+        </nav>
+    </header>
+    <div>
+        <h class="define">Hamiltonian Path and Cycle:</h>
+        <br /><br /><br /><br />
+        <p class="text">
+            <span style="color:#E89611">The Hamiltonian path problem </span>
+            is a topic discussed in the fields of complexity theory
+            and graph theory. It decides if a directed or undirected graph, G,
+            contains a Hamiltonian path, a path that visits every vertex in the graph exactly once.
+            <span style="color:#E89611">The Hamiltonian cycle problem </span>
+            is similar to the Hamiltonian path problem, except it asks if a given 
+            graph contains a Hamiltonian cycle.
+        </p>
+        <br /><br /><br /><br />
+        <p class="text">
+            <b><span style="color: #E89611; font-size: 25px;">
+                    <h>Hamiltonian Path:</h>
+                </span></b>
+                A simple path in a graph G that passes through every vertex 
+                exactly once is called a Hamiltonian path. The simple path
+                x<sub>0</sub>, x<sub>1</sub>, ..., x<sub>n-1</sub>, x<sub>n</sub>
+                in the graph G = (V, E) is a Hamiltonian path if V = 
+                    {x<sub>0</sub>, x<sub>1</sub>, ..., x<sub>n-1</sub>, x<sub>n</sub>}
+                and x<sub>i</sub> &ne; x<sub>j</sub> for 0 <= i <= j <= n.
+        </p>
+        <br /><br /><br /><br />
+        <p class="text">
+            <b><span style="color: #E89611; font-size: 25px;">
+                    <h>Hamiltonian Circuit:</h>
+                </span></b>
+                A simple circuit in a graph G that passes through every vertex exactly once is called
+                a Hamiltonian circuit. The simple circuit 
+                x<sub>0</sub>, x<sub>1</sub>, ..., x<sub>n-1</sub>, x<sub>n</sub>, x<sub>0</sub> 
+                (with n > 0) is a Hamilton circuit if 
+                x<sub>0</sub>, x<sub>1</sub>, ..., x<sub>n-1</sub>, x<sub>n</sub>
+                is a Hamiltonian Path.
+        </p>
+        <div class="parent">
+            <img class="child" id="hamilton" src="images/hamilton.png">
+            <p class="child" id="fig2">Fig : G<sub>1</sub> has a Hamiltonian <br/>
+                Circuit: a, b, c, d, e, a<br/>
+                G<sub>2</sub> has a Hamiltonian <br/>
+                Path: a, b, c, d<br/>
+                G<sub>3</sub> has neither.
+            </p>
+        </div>
+        <br /><br /><br />
+        <p class="text">
+            <b><span style="color: #E89611; font-size: 25px;">
+                    <h>Dirac's Theorem:</h>
+                </span></b>
+                If G is a simple graph with n vertices with n >= 3 such that the
+                degree of every vertex in G is at least n/2, then G has a Hamilton circuit.
+        </p> <br /><br /><br />
+        <p class="text">
+            <b><span style="color: #E89611; font-size: 25px;">
+                    <h>Ore's Theorem:</h>
+                </span></b>
+                If G is a simple graph with n vertices with n >= 3 such that 
+                deg(u) + deg(v) >= n for every pair of nonadjacent vertices u and v in G, 
+                then G has a Hamilton circuit.
+        </p> <br /><br /><br />
+    </div>
+</body>
+
+</html>
