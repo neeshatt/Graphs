@@ -19,6 +19,7 @@ document.getElementById("start-btn").addEventListener("click", function() {
     document.getElementById("log").contentDocument.body.innerHTML = "";
     document.getElementById("graph").innerHTML = "";
     document.getElementById("colored-graph").innerHTML = "";
+    document.getElementById("adjacency-matrix").innerHTML = "";
 });
 
 document.getElementById("js-code").addEventListener("keypress", function(event) {
@@ -80,6 +81,7 @@ function finishGraphConstruction() {
         logFrame.contentDocument.body.innerHTML += `<p>${edge[0]} - ${edge[1]}</p>`;
     });
     createColoredGraph();
+    displayAdjacencyMatrix();
 }
 
 function renderGraph() {
@@ -128,6 +130,8 @@ function renderGraph() {
         
         graphElement.appendChild(edge);
     });
+
+    displayAdjacencyMatrix();
 }
 
 function createColoredGraph() {
@@ -226,3 +230,44 @@ document.getElementById("color-btn").addEventListener("click", function() {
     createColoredGraph();
     colorGraph(startNode);
 });
+
+function generateAdjacencyMatrix() {
+    const matrix = Array(numNodes).fill().map(() => Array(numNodes).fill(0));
+    edges.forEach(([from, to]) => {
+        matrix[from - 1][to - 1] = 1;
+        matrix[to - 1][from - 1] = 1;  // Assuming undirected graph
+    });
+    return matrix;
+}
+
+function displayAdjacencyMatrix() {
+    const matrix = generateAdjacencyMatrix();
+    const matrixElement = document.getElementById('adjacency-matrix');
+    matrixElement.innerHTML = '';
+    
+    const table = document.createElement('table');
+    
+    // Create header row
+    const headerRow = table.insertRow();
+    headerRow.insertCell(); // Empty cell for top-left corner
+    for (let i = 1; i <= numNodes; i++) {
+        const th = document.createElement('th');
+        th.textContent = i;
+        headerRow.appendChild(th);
+    }
+    
+    // Create matrix rows
+    for (let i = 0; i < numNodes; i++) {
+        const row = table.insertRow();
+        const th = document.createElement('th');
+        th.textContent = i + 1;
+        row.appendChild(th);
+        
+        for (let j = 0; j < numNodes; j++) {
+            const cell = row.insertCell();
+            cell.textContent = matrix[i][j];
+        }
+    }
+    
+    matrixElement.appendChild(table);
+}
