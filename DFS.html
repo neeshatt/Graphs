@@ -1,74 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DFS Traversal</title>
-<link rel="stylesheet" href="DFS.css">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DFS Traversal</title>
+    <link rel="stylesheet" href="DFS.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
+
 <body>
-<header>
-    <div>
-        <h2 id="h" align="left">DotConnect</h2>
-        <img id="logo" src="line-chart.png">
-    </div>
-    <nav>
-        <ul class="nav_links">
-            <li><a href="homepage.html"> Home </a></li>
-            <li><a href="problemset.html"> Problemset </a></li>
-            <li><a href="IDE.html"> IDE </a></li>
-            <li><a href="AboutUs.html"> About us </a></li>
-        </ul>
-    </nav>
-</header>
-<main>
-    <h2 id="head">DFS Traversal</h2>
-
-    <div class="button">
-        <span id="para"> Create your own graph and see DFS for yourself.</span>
-        <button id="start-btn">Start</button>
-    </div>
-
-    <div class="container2">
-        <div class="left">
-            <label><i class="fa-brands fa-js" style="color: #FFD43B;"></i>Javascript Graph Constructor</label>
-            <textarea id="js-code"></textarea>
+    <header>
+        <div>
+            <h2 id="h" align="left">DotConnect</h2>
+            <img id="logo" src="line-chart.png">
         </div>
-        <div class="right">
-            <div class="container">
-                <div id="graph"></div>
+        <nav>
+            <ul class="nav_links">
+                <li><a href="homepage.html"> Home </a></li>
+                <li><a href="problemset.html"> Problemset </a></li>
+                <li><a href="IDE.html"> IDE </a></li>
+                <li><a href="AboutUs.html"> About us </a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2 id="head">DFS Traversal</h2>
+        <br /><br /><br />
+        <p class="text">
+            Depth-first search (DFS) is an algorithm for traversing or searching tree or graph data structures. The
+            algorithm starts at the root node (selecting some arbitrary node as the root node in the case of a graph)
+            and
+            explores as far as possible along each branch before backtracking.
+            The algorithm starts from a given source and explores all reachable vertices from the given source. It is
+            similar to 
+            <span style="color: #E89611;">Preorder Tree Traversal</span> 
+            where we visit the root, then recur for its children. In a graph, there
+            maybe loops. So we use an extra visited array to make sure that we do not process a vertex again.
+        </p>
+        <br /><br /><br />
+        <div class="parent">
+            <img class="child" id="dfss" src="images/dfss.png">
+            <p class="child" id="fig">Fig : one example of DFS traversal <br/>on this graph could be:<br/>
+                1&rarr;2&rarr;3&rarr;4&rarr;5&rarr;6&rarr;7&rarr;8&rarr;9&rarr;10&rarr;11&rarr;12
+                <br/>while another could be:<br/>
+                11&rarr;9&rarr;10&rarr;8&rarr;12&rarr;1&rarr;7&rarr;2&rarr;3&rarr;4&rarr;5&rarr;6.
+                <br/>There can be many different results <br/>for the same graph in different <br/>
+                programs and they are all correct if <br/> DFS procedures are carefully followed.
+            </p>
+        </div>
+        <br /><br /><br />
+
+        <div class="button">
+            <span id="para"> Create your own graph and see DFS for yourself.</span>
+            <button id="start-btn">Start</button>
+        </div>
+
+        <div class="container2">
+            <div class="left">
+                <label><i class="fa-brands fa-js" style="color: #FFD43B;"></i>Javascript Graph Constructor</label>
+                <textarea id="js-code"></textarea>
+            </div>
+            <div class="right">
+                <div class="container">
+                    <div id="graph"></div>
+                </div>
             </div>
         </div>
-    </div>
 
-    <div class="box-container">
-        <div class="box">
-            <label><i class="fa-solid fa-book" style="color: #63E6BE;"></i>Log Box</label>
-            <iframe id="log"></iframe>
+        <div class="box-container">
+            <div class="box">
+                <label><i class="fa-solid fa-book" style="color: #63E6BE;"></i>Log Box</label>
+                <iframe id="log"></iframe>
+            </div>
+            <div class="box">
+                <label><i class="fa-solid fa-hashtag" style="color: cyan;"></i>Adjacency Matrix</label>
+                <div id="adjacency-matrix"></div>
+            </div>
         </div>
-        <div class="box">
-            <label><i class="fa-solid fa-hashtag" style="color: cyan;"></i>Adjacency Matrix</label>
-            <div id="adjacency-matrix"></div>
-        </div>
-    </div>
 
-    <div class="dfs-container">
-        <div class="dfs-controls">
-            <h3>DFS Traversal Result:&nbsp&nbsp</h3>
-            <input type="number" id="start-node" placeholder="Enter starting node">
-            <button id="dfs-btn">Start DFS</button>
-        </div>
-        <div id="dfs-result">
-            
-            <textarea id="dfs-output" rows="5" readonly></textarea>
-        </div>
-    </div>
-</main>
+        <div class="dfs-container">
+            <div class="dfs-controls">
+                <h3>DFS Traversal Result:&nbsp&nbsp</h3>
+                <input type="number" id="start-node" placeholder="Enter starting node">
+                <button id="dfs-btn">Start DFS</button>
+            </div>
+            <div id="dfs-result">
 
-<script src="DFS.js"></script>
+                <textarea id="dfs-output" rows="5" readonly></textarea>
+            </div>
+        </div>
+    </main>
+
+    <script src="DFS.js"></script>
 </body>
+
 </html>
