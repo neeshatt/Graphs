@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graph Coloring</title>
+    <link rel="stylesheet" href="graph_coloring.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div>
+            <h2 id="h" align="left">DotConnect</h2>
+            <img id="logo" src="line-chart.png">
+        </div>
+        <nav>
+            <ul class="nav_links">
+                <li><a href="homepage.html"> Home </a></li>
+                <li><a href="problemset.html"> Problemset </a></li>
+                <li><a href="IDE.html"> IDE </a></li>
+                <li><a href="AboutUs.html"> About us </a></li>
+            </ul>
+        </nav>
+    </header>
+    <h2 id="head"> Graph Coloring </h2>
+    <div class="button">
+        <span id="para"> Create your own graph and see graph coloring for yourself.</span>
+        <button id="start-btn">Start</button>
+    </div>
+    <div class="container2">
+        <div class="left">
+            <label><i class="fa-brands fa-js" style="color: #FFD43B;"></i>Javascript Graph Constructor</label>
+            <textarea id="js-code"></textarea>
+        </div>
+        <div class="right">
+            <div class="container">     
+                <div id="graph"></div>
+            </div>
+        </div>
+    </div>
+    <div class="box">
+        <label><i class="fa-solid fa-book" style="color: #63E6BE;"></i>Log Box</label>
+        <iframe id="log"></iframe>
+    </div>
+    <div class="coloring-container">
+        <div class="coloring-controls">
+            <input type="number" id="start-node" placeholder="Starting node">
+            <button id="color-btn">Color Graph</button>
+        </div>
+        <div id="colored-graph"></div>
+    </div>
+    <script src="graph_coloring.js"></script>
+</body>
+</html>

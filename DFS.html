@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DFS Traversal</title>
+<link rel="stylesheet" href="DFS.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+<header>
+    <div>
+        <h2 id="h" align="left">DotConnect</h2>
+        <img id="logo" src="line-chart.png">
+    </div>
+    <nav>
+        <ul class="nav_links">
+            <li><a href="homepage.html"> Home </a></li>
+            <li><a href="problemset.html"> Problemset </a></li>
+            <li><a href="IDE.html"> IDE </a></li>
+            <li><a href="AboutUs.html"> About us </a></li>
+        </ul>
+    </nav>
+</header>
+<main>
+    <h2 id="head">DFS Traversal</h2>
+
+    <div class="button">
+        <span id="para"> Create your own graph and see DFS for yourself.</span>
+        <button id="start-btn">Start</button>
+    </div>
+
+    <div class="container2">
+        <div class="left">
+            <label><i class="fa-brands fa-js" style="color: #FFD43B;"></i>Javascript Graph Constructor</label>
+            <textarea id="js-code"></textarea>
+        </div>
+        <div class="right">
+            <div class="container">
+                <div id="graph"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="box-container">
+        <div class="box">
+            <label><i class="fa-solid fa-book" style="color: #63E6BE;"></i>Log Box</label>
+            <iframe id="log"></iframe>
+        </div>
+        <div class="box">
+            <label><i class="fa-solid fa-hashtag" style="color: cyan;"></i>Adjacency Matrix</label>
+            <div id="adjacency-matrix"></div>
+        </div>
+    </div>
+
+    <div class="dfs-container">
+        <div class="dfs-controls">
+            <h3>DFS Traversal Result:&nbsp&nbsp</h3>
+            <input type="number" id="start-node" placeholder="Enter starting node">
+            <button id="dfs-btn">Start DFS</button>
+        </div>
+        <div id="dfs-result">
+            
+            <textarea id="dfs-output" rows="5" readonly></textarea>
+        </div>
+    </div>
+</main>
+
+<script src="DFS.js"></script>
+</body>
+</html>

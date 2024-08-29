@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <link rel="stylesheet" href="homepage.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+</head>
+<body>
+    <header>
+        <!--Image-->
+        <div>
+            <h2 id="h" align="left">DotConnect</h2>
+            <img id="logo" src="line-chart.png">
+        </div>
+        <nav>
+            <ul class="nav_links">
+                <li><a class="active" href="#"> Home </a></li>
+                <li><a href="problemset.html"> Problemset </a></li>
+                <li><a href="IDE.html"> IDE </a></li>
+                <li><a href="AboutUs.html"> About us </a></li>
+            </ul>
+        </nav>
+    </header>
+    <h1 align="center">Graphs and Trees</h1>
+    <div>
+        <p class="intro">
+            In the realm of data structures and algorithms, trees and graphs are fundamental in efficiently managing and organizing data. Trees are hierarchical structures with nodes connected by edges, featuring a root node, parent-child relationships, and leaf nodes; they are utilized in applications like binary search trees for efficient searching, heaps for priority queues, and tries for string matching. Graphs, composed of vertices and edges, represent more generalized structures that can be directed or undirected, and weighted or unweighted, finding use in social networks, routing algorithms, and dependency management. Mastery of trees and graphs is crucial for designing efficient solutions to a myriad of computational problems, making them essential tools in computer science and software engineering.   
+        </p>
+    </div>
+    <div class="container">     
+        <h1>Tree Map</h1>
+        <div class="tree"></div>
+    </div>
+    <div class="bulb_container">
+    <span> Got stuck navigating the tree? Click on this icon here.</span>
+    <img id="bulb" src="solution.png" onclick="alert('The First Node')">
+    </div>  
+    <script defer type="module" src="homepage.js"></script>
+</body>
+</html>
