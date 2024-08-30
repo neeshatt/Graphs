@@ -1,19 +1,15 @@
 const getTreeData = () => {
     return {
-        text: 'Walk The Walk',
-        link: "walkthewalk.html",
+        text: 'Graph Coloring',
+        link: "coloring.html",
       left: {
-        text: 'Learn Your Graphs!',
-        left: {
-            text: 'Graph Coloring',
-            link: "coloring.html",
-          },
+        text: 'You Do It!',
       },
     };
   };
   
-  const renderBinaryTree = (node) => {
-    const { left, right, text, link } = node;
+  const renderBinaryTree = (node2) => {
+    const { left, right, text, link } = node2;
     const textElement = link
      ? `<div class="node__element"><a href="#" onclick="window.location.href='${link}'; return false;" class=node__link>${text}</a></div>`
       : `<div class="node__element">${text}</div>`;
@@ -27,7 +23,7 @@ const getTreeData = () => {
               ${
                 left
                   ? `
-                  <div class="node node--left">
+                  <div class="node2 node--left">
                     ${renderBinaryTree(left)}
                   </div>
                   `
@@ -36,7 +32,7 @@ const getTreeData = () => {
               ${
                 right
                   ? `
-                  <div class="node node--right">
+                  <div class="node2 node--right">
                     ${renderBinaryTree(right)}
                   </div>
                   `
