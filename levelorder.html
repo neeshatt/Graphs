@@ -35,15 +35,15 @@
     <h2 id="head"> Level Order Traversal </h2>
     <br /><br />
     <p class="text">
-        Let T be an ordered rooted tree with root r. If T consists only of r, then r is the postorder
-        traversal of T. Otherwise, suppose that T<sub>1</sub>,T<sub>2</sub>,…,T<sub>n</sub> are the subtrees at r from
-        left to right in T. The postorder traversal begins by traversing T<sub>1</sub> in
-        postorder, then T<sub>2</sub> in postorder, ..., then T<sub>n</sub> in postorder and ends by visiting r.
+        The idea of level order traversal is to traverse all the nodes of a lower level before moving to any of the
+        nodes of a higher level. This technique is defined as a method to traverse a Tree such that all nodes present in
+        the same level are traversed completely before traversing the next level.
     </p> <br />
     <div class="parent">
         <img class="child" id="inorder" src="inorder.png">
-        <p class="child" id="fig">Fig: left child &#8594; right child &#8594; root <br /> <br />
-            4 &#8594; 8 &#8594; 5 &#8594; 2 &#8594; 6 &#8594; 9 &#8594; 10 &#8594; 7 &#8594; 3 &#8594; 1
+        <p class="child" id="fig">Fig:
+            1 &#8594; 2 &#8594; 3 &#8594; 4 &#8594; 5 &#8594; 6 &#8594; 7 &#8594; 8 &#8594; 9 &#8594; 10
+            <br/> Here, each level is traversed completely<br/> before moving on to the next level.
         </p><br /><br /><br />
     </div> <br />
     <div class="button">
@@ -71,7 +71,7 @@
             <iframe id="log"></iframe>
         </div>
     </div>
-    
+
     <script defer type="module" src="levelorder.js"></script>
     <!--<script defer type="module" src="inorder.js"></script>-->
 </body>
